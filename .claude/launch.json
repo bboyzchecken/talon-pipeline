@@ -12,6 +12,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve", "leads/busarakhum-group/dist", "-l", "4174"],
       "port": 4174
+    },
+    {
+      "name": "sikhara-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/sikhara-corporation/dist", "-l", "4175"],
+      "port": 4175
     }
   ]
 }
