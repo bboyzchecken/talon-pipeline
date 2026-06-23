@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve", "leads/sinphattana/dist", "-l", "4173"],
       "port": 4173
+    },
+    {
+      "name": "busarakhum-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/busarakhum-group/dist", "-l", "4174"],
+      "port": 4174
     }
   ]
 }
