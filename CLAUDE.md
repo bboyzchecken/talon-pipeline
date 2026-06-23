@@ -115,6 +115,23 @@ talon-pipeline/
 - รีวิวจริง = วัตถุดิบหาจุดขาย แต่ **สรุปใจความเอง** ไม่ก๊อปคำรีวิว
 - ไม่รู้จริง อย่าแต่ง (เมนู/ราคา/รางวัล) — เว้นหรือใส่ placeholder ที่ลูกค้าเติมได้
 - ทุกหน้า: `<title>` + meta description + OG + `lang="th"` + รูปมี alt
+- **OG/Twitter image + canonical/og:url ต้องเป็น URL เต็ม (absolute)** ไม่งั้น crawler (FB/LINE) อ่านไม่ได้ การ์ดแชร์ไม่ขึ้น · เพจ demo ใส่ `<meta name="robots" content="noindex">`
+
+## 📱 Responsive + QA — ทำทุก demo ก่อนบอกว่าเสร็จ
+
+เว็บถูกเปิดบนมือถือจริงของลูกค้า เพี้ยนนิดเดียวก็เสียภาพ "เราทำเว็บดี" — **อย่าเชื่อแค่สายตา ให้วัด DOM**
+
+**Pitfalls (เคยเจอจริง — เลี่ยง):**
+- `padding` shorthand บน element ที่เป็น `.wrap` (เช่น `.hero-inner{padding:66px 0 60px}`) จะ **ลบซ้าย/ขวาเป็น 0** ทับ `.wrap` → เนื้อหาชิดขอบ (มักโผล่เฉพาะ >600px) → ใช้ `padding-top`/`padding-bottom` อย่างเดียว ปล่อยซ้าย/ขวาให้ `.wrap`
+- padding ซ้าย/ขวา **อย่าหดลงบนจอเล็ก** (เคยตั้ง ≤400px=18px เล็กกว่า ≤600px=22px) — จอเล็กควร ≥ จอกลาง
+- ปุ่ม label ยาว → ตัดบรรทัด → ปุ่มสูง → ปุ่มข้างยืดตาม → ขอบมน 999px เป็นก้อนโต → label สั้น + `white-space:nowrap` + `min-width:0`
+- ปุ่มในเมนูมือถือโดน `.mobile-menu a{display:block}` ทับ → ใส่ `.mobile-menu .btn{display:flex;justify-content:center;align-items:center}`
+
+**Verify matrix (preview server แล้ววัดทุกความกว้าง):**
+- มือถือ **360/375/390/414** · iPad **768/1024** · laptop/desktop **1440/1920**
+- เช็ค overflow: `scrollWidth > clientWidth` + หา element ที่ `getBoundingClientRect().right > vw`
+- วัด **ตำแหน่งซ้ายของ content จริง** (`.hero h1`, `.hero p`, หัวข้อ section) ว่า align กับโลโก้/CTA ที่ inset เท่ากัน — ไม่ใช่แค่ขอบ `.wrap`
+- screenshot มือถือ + tablet + desktop ยืนยัน
 
 ## 💰 ราคา/แผน (`offer.md`) — ต่อราย
 
