@@ -1,0 +1,14 @@
+# secrets — ห้าม commit (มี API keys)
+.env
+.env.*
+
+# local Claude Code settings
+.claude/settings.local.json
+
+# scratch / temp
+_scratch_*
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db

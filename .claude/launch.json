@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sinphattana-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/sinphattana/dist", "-l", "4173"],
+      "port": 4173
+    }
+  ]
+}
