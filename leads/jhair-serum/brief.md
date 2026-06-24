@@ -59,11 +59,16 @@
 ## ทิศทาง demo (ตกลงกับลูกค้า)
 - "ขายในเว็บ จบในเว็บ" ครบทุก SKU แต่ **ไม่เอา ecommerce จำเจ** → ทำเป็น **เซลเพจเชิงเล่าเรื่อง (editorial sale page)** สั่งซื้อ/ปิดการขายผ่าน LINE + โทร
 - เน้น **SEO สูงสุด** (meta + OG absolute + JSON-LD Organization/Product/FAQ + heading/alt ครบ)
-- รองรับแนวคิด **รีแบรนด์** → ใช้ภาพขวด/ส่วนผสมแบบวาด (CSS/SVG) ไม่ผูกกับภาพถ่ายชุดเก่า สลับเป็นภาพจริงได้ภายหลัง
+- รองรับแนวคิด **รีแบรนด์**
 
-## ⬜ ดีไซน์ & คอนเทนต์ (ทิศที่เลือกให้)
-- มู้ด: **พรีเมียม-ชาย / apothecary-tonic** — ดำถ่าน (charcoal) + ทองบรอนซ์ + เขียวสมุนไพร + ครีม
-- ฟอนต์: Trirong (หัวเรื่อง) + Noto Sans Thai (เนื้อหา)
-- ⬜ รูปจริง: ภาพขวดจริง / before–after (ขอสิทธิ์) / รูปลูกค้าใช้จริง → สลับแทนภาพวาดได้
-- ⬜ โลโก้/wordmark จริงหลังรีแบรนด์ (ตอนนี้ใช้ wordmark "JHAIR" + ดรอป-ใบไม้)
-- ⬜ OG image: ตอนนี้เป็น .svg — ก่อน launch จริงควร export เป็น .jpg 1200×630 ให้ FB/LINE อ่านชัวร์
+## ดีไซน์ & คอนเทนต์ (เวอร์ชัน 2 — ปรับตาม feedback ลูกค้า 2026-06-24)
+- มู้ด: **คลินิก-พรีเมียม-ชาย (clinical/tech)** — **สีจากโลโก้/แบรนด์จริง**: ฟ้า cyan `#17D9FC` + กรมท่า `#262E37` + ดำ `#0F141A` + ขาว (โทนเดิมของแบรนด์)
+- ฟอนต์: **Kanit** (หัวเรื่อง geometric) + Noto Sans Thai (เนื้อหา) + Space Grotesk (ตัวเลข/ป้าย) — ชุดใหม่ ไม่ซ้ำ template เดิมในรีโป
+- **Layout ใหม่ทั้งหมด** (template "Clinical Dark" — flagship แพ็กแพงสุด): editorial numbered sections (01–07), hero full-bleed มี grid texture, แถบ ticker, แถวงานวิจัยสลับซ้าย-ขวา, before/after 2×2, การ์ดสินค้ามี cyan glow, รีวิว marquee, section บทความพื้นหลังสว่าง — โครงต่างจาก sinphattana/busarakhum/sikhara และต่างจาก demo เวอร์ชัน 1
+- **รูปทั้งหมดเป็นภาพจริงจากเว็บลูกค้า** (ไม่มี SVG วาดเอง) — ดึงจาก jhairserum.com (WP/WooCommerce): logo, สินค้า 10 ชิ้น, รางวัล, งานวิจัย, before/after, ดารา, ภาพบทความ → ย่อ/แปลงเป็น .jpg เพื่อ performance (รวม ~3.8MB)
+- OG image = ภาพรางวัลจริง `hero-banner.webp` (absolute URL)
+- ⬜ ก่อน launch: ถ้ารีแบรนด์เปลี่ยนโทนสี ค่อยปรับ `--cyan/--navy` (จุดเดียวจบ) · ขอภาพสินค้าพื้นหลังใส/คมชัดขึ้นถ้ามี · ขอไฟล์ใบรับรอง/งานวิจัยความละเอียดสูง
+
+## 🖼️ Asset inventory (ภาพจริงในโฟลเดอร์ images/)
+- `logo.png` · สินค้า `p1-premium30`…`p10-shampoo` (.png/.gif) · `hero-banner.webp` (รางวัล) · `hero-product.webp` (มัลเบอรี่)
+- งานวิจัย `g1076` (Fuji Mulberry), `g1077` (ใบหมี่/TISTR) · before/after `rev1–rev6.jpg` · `presenter1.jpg` (ดารา) · บทความ `tip1–tip4.jpg`
