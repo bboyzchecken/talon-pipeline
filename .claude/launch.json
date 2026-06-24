@@ -18,6 +18,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve", "leads/sikhara-corporation/dist", "-l", "4175"],
       "port": 4175
+    },
+    {
+      "name": "jhair-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/jhair-serum/dist", "-l", "4176"],
+      "port": 4176
     }
   ]
 }
