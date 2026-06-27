@@ -1,7 +1,0 @@
-# deps
-node_modules/
-
-# TS incremental build cache
-*.tsbuildinfo
-
-# keep dist/ committed — served statically like the lead demos
