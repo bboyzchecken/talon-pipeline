@@ -30,6 +30,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve", "leads/post-mail-box/dist", "-l", "4177"],
       "port": 4177
+    },
+    {
+      "name": "qscbc-donate-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/qscbc-foundation-donate/dist", "-l", "4178"],
+      "port": 4178
     }
   ]
 }
