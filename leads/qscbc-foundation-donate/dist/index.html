@@ -4,364 +4,406 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>ร่วมบริจาค · มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ (QSCBCF)</title>
-<meta name="description" content="ร่วมเป็นพลังให้ผู้ป่วยมะเร็งเต้านม กับมูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ — บริจาคออนไลน์ ครั้งเดียวหรือรายเดือน โปร่งใส ลดหย่อนภาษีได้">
-<link rel="icon" href="assets/favicon.ico">
+<title>ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม | Queen Sirikit Centre for Breast Cancer</title>
+<meta name="description" content="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย — ดูแลผู้ป่วยมะเร็งเต้านมอย่างครบวงจร ตั้งแต่การตรวจคัดกรอง วินิจฉัย รักษา จนถึงการฟื้นฟู">
+<link rel="icon" href="assets/img/logo-emblem.png" type="image/png">
 
-<!-- OG / Twitter — ใช้ URL เต็มหลัง deploy (แก้เป็นโดเมนจริง) -->
+<!-- OG / Twitter — แก้เป็นโดเมนจริงหลัง deploy -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="th_TH">
-<meta property="og:site_name" content="มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ">
-<meta property="og:title" content="ร่วมบริจาค · มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ">
-<meta property="og:description" content="ทุกการให้ คือพลังของการต่อสู้กับมะเร็งเต้านม — บริจาคออนไลน์ ปลอดภัย โปร่งใส ลดหย่อนภาษีได้">
-<meta property="og:url" content="https://qscbc-donate.pages.dev/">
-<meta property="og:image" content="https://qscbc-donate.pages.dev/assets/img/park-aerial.jpg">
+<meta property="og:site_name" content="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม">
+<meta property="og:title" content="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม">
+<meta property="og:description" content="ดูแลผู้ป่วยมะเร็งเต้านมอย่างครบวงจร · โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย">
+<meta property="og:url" content="https://qscbc-demo.pages.dev/">
+<meta property="og:image" content="https://qscbc-demo.pages.dev/assets/img/hero-sky.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ร่วมบริจาค · มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ">
-<meta name="twitter:description" content="ทุกการให้ คือพลังของการต่อสู้กับมะเร็งเต้านม">
-<meta name="twitter:image" content="https://qscbc-donate.pages.dev/assets/img/park-aerial.jpg">
-<link rel="canonical" href="https://qscbc-donate.pages.dev/">
+<link rel="canonical" href="https://qscbc-demo.pages.dev/">
 
 <style>
-/* ============ FONTS (SukhumvitSet — ของจริง) ============ */
+/* ===== FONTS (SukhumvitSet) ===== */
 @font-face{font-family:'Sukhumvit';src:url('assets/fonts/SukhumvitSet-Light.ttf') format('truetype');font-weight:300;font-display:swap}
 @font-face{font-family:'Sukhumvit';src:url('assets/fonts/SukhumvitSet-Text.ttf') format('truetype');font-weight:400;font-display:swap}
 @font-face{font-family:'Sukhumvit';src:url('assets/fonts/SukhumvitSet-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
 @font-face{font-family:'Sukhumvit';src:url('assets/fonts/SukhumvitSet-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
 @font-face{font-family:'Sukhumvit';src:url('assets/fonts/SukhumvitSet-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
 
-/* ============ TOKENS (sampled จาก brand asset จริง) ============ */
+/* ===== TOKENS (blue + gold royal palette, sampled จากเว็บใหม่ qscbc.org) ===== */
 :root{
-  --pink:#E6007E;        /* ริบบิ้น — สีหลัก */
-  --pink-deep:#9d174d;
-  --pink-soft:#fcecf1;
-  --pink-tint:#f7abc5;
-  --gold:#d9b879;
-  --gold-grad:linear-gradient(180deg,#F0D58B 0%,#D0A351 54%,#BA883B 100%);
-  --gold-grad-h:linear-gradient(90deg,#D0A351 0%,#F0D58B 56%,#BA883B 100%);
-  --blue:#b3d1ed;
-  --ink:#414042;
-  --grey:#737476;
-  --grey-line:#E7E3E1;
-  --cream:#FBF8F6;
+  --ink:#1E3F4E;          /* deep blue-grey — หัวข้อ/ตัวอักษร */
+  --ink-soft:#5C6E76;     /* ตัวอักษรรอง */
+  --teal:#2C8FB1;         /* ฟ้าเทอร์คอยซ์ (อักษรพระนามาภิไธย ส) */
+  --teal-deep:#1F6E8C;
+  --sky:#BCD7EF;          /* ฟ้าอ่อน (พื้น) */
+  --sky-soft:#EAF3FB;     /* ฟ้าอ่อนมาก */
+  --gold:#C29A4E;         /* ทอง */
+  --gold-soft:#DDB473;
+  --gold-grad:linear-gradient(90deg,#BC8E3C 0%,#EAD79C 52%,#C49A4E 100%);
+  --gold-grad-v:linear-gradient(180deg,#EAD79C 0%,#C49A4E 55%,#A9802F 100%);
+  --cream:#FBF8F1;        /* ครีมอบอุ่นเข้ากับทอง */
+  --line:#E6E0D5;
   --white:#fff;
-  --wrap:1160px;
+  --wrap:1180px;
   --pad:clamp(20px,5vw,40px);
-  --radius:16px;
-  --shadow-sm:0 2px 14px rgba(65,64,66,.08);
-  --shadow-md:0 14px 40px rgba(65,64,66,.12);
-  --shadow-pink:0 12px 30px rgba(230,0,126,.28);
+  --radius:14px;
+  --shadow-sm:0 2px 14px rgba(30,63,78,.08);
+  --shadow-md:0 16px 44px rgba(30,63,78,.14);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Sukhumvit',-apple-system,'Segoe UI',sans-serif;
-  color:var(--ink);background:var(--white);line-height:1.65;font-weight:400;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
+body{font-family:'Sukhumvit',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--white);
+  line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lang-en{line-height:1.6}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
-.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.gold-line{width:54px;height:3px;border-radius:3px;background:var(--gold-grad-h)}
-h1,h2,h3{font-weight:300;line-height:1.2;color:var(--ink);letter-spacing:-.01em}
-.section{padding:clamp(56px,8vw,104px) 0}
-.section-head{max-width:680px;margin:0 auto clamp(34px,5vw,56px);text-align:center}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.gold-line{width:56px;height:3px;border-radius:3px;background:var(--gold-grad)}
+h1,h2,h3{font-weight:300;line-height:1.22;color:var(--ink);letter-spacing:-.01em}
+.section{padding:clamp(54px,8vw,100px) 0}
+.section-head{max-width:720px;margin:0 auto clamp(32px,5vw,54px);text-align:center}
 .section-head .gold-line{margin:18px auto 0}
-.section-head h2{font-size:clamp(1.7rem,4.4vw,2.7rem);margin-top:14px}
-.section-head p{color:var(--grey);margin-top:14px;font-size:1.05rem}
+.section-head h2{font-size:clamp(1.7rem,4.4vw,2.6rem);margin-top:14px}
+.section-head p{color:var(--ink-soft);margin-top:14px;font-size:1.05rem}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;
-  font-family:inherit;font-weight:600;font-size:1rem;cursor:pointer;border:none;
-  padding:14px 28px;border-radius:999px;white-space:nowrap;min-width:0;
-  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease}
-.btn-pink{background:var(--pink);color:#fff;box-shadow:var(--shadow-pink)}
-.btn-pink:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(230,0,126,.36)}
-.btn-gold{background:var(--gold-grad-h);color:#5a3f15}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:inherit;
+  font-weight:600;font-size:1rem;cursor:pointer;border:none;padding:13px 26px;border-radius:999px;
+  white-space:nowrap;min-width:0;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 26px rgba(44,143,177,.3)}
+.btn-teal:hover{transform:translateY(-2px);background:var(--teal-deep);box-shadow:0 14px 32px rgba(44,143,177,.4)}
+.btn-gold{background:var(--gold-grad);color:#553f12}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--grey-line)}
-.btn-ghost:hover{border-color:var(--pink);color:var(--pink)}
-.btn-lg{padding:17px 36px;font-size:1.08rem}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-lg{padding:16px 34px;font-size:1.06rem}
 
-/* ============ TOP BAR ============ */
-.topbar{background:var(--ink);color:#cfc7c0;font-size:.8rem}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:9px;padding-bottom:9px}
-.topbar .tag{display:flex;align-items:center;gap:9px;letter-spacing:.04em}
-.topbar .tag b{color:var(--gold);font-weight:600}
-.topbar .util{display:flex;align-items:center;gap:16px}
-.topbar .util a{opacity:.85;transition:opacity .2s}
-.topbar .util a:hover{opacity:1}
-.lang span{cursor:pointer;opacity:.55;font-weight:600}
-.lang span.on{opacity:1;color:#fff}
-.lang i{opacity:.4;margin:0 3px;font-style:normal}
+/* ===== TOP BAR ===== */
+.topbar{background:var(--ink);color:#c7d3d8;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px}
+.topbar .org{letter-spacing:.03em}
+.topbar .org b{color:var(--gold-soft);font-weight:600}
+.topbar .util{display:flex;align-items:center;gap:18px;flex:none}
+.topbar .util a{opacity:.9;display:flex;align-items:center;gap:6px}
+.topbar .util a:hover{opacity:1;color:#fff}
+.topbar .util svg{width:13px;height:13px}
+.langsw{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+.langsw button{background:none;border:none;color:#c7d3d8;font-family:inherit;font-weight:600;
+  font-size:.74rem;padding:3px 11px;cursor:pointer;transition:.2s}
+.langsw button.on{background:var(--gold-grad);color:#4a360f}
 
-/* ============ HEADER ============ */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--grey-line);transition:box-shadow .3s}
+/* ===== HEADER / MEGA MENU ===== */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);transition:box-shadow .3s}
 header.scrolled{box-shadow:var(--shadow-sm)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;
-  padding-top:12px;padding-bottom:12px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
 .brand{display:flex;align-items:center;gap:13px;min-width:0}
-.brand img{height:54px;width:auto}
-.brand .bt{line-height:1.15;min-width:0}
-.brand .bt b{display:block;font-weight:600;font-size:.98rem;color:var(--ink)}
-.brand .bt span{display:block;font-size:.7rem;letter-spacing:.05em;color:var(--grey)}
-.menu{display:flex;align-items:center;gap:30px}
-.menu a{font-size:.98rem;font-weight:500;color:var(--ink);position:relative;padding:4px 0}
-.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;
-  background:var(--pink);transition:right .25s ease}
-.menu a:hover::after{right:0}
-.nav-cta{display:flex;align-items:center;gap:14px}
+.brand img{height:58px;width:auto}
+.brand .bt{line-height:1.18;min-width:0}
+.brand .bt b{display:block;font-weight:600;font-size:.92rem;color:var(--ink)}
+.brand .bt span{display:block;font-size:.68rem;letter-spacing:.02em;color:var(--ink-soft)}
+.menu{display:flex;align-items:center;gap:4px}
+.menu>li{position:relative;list-style:none}
+.menu>li>a,.menu>li>button{display:inline-flex;align-items:center;gap:5px;font-family:inherit;
+  font-size:.95rem;font-weight:500;color:var(--ink);background:none;border:none;cursor:pointer;
+  padding:10px 13px;border-radius:8px;transition:.18s}
+.menu>li>a:hover,.menu>li>button:hover,.menu>li.open>button{color:var(--teal);background:var(--sky-soft)}
+.menu>li>button svg{width:13px;height:13px;transition:transform .2s}
+.menu>li.open>button svg{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:286px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-md);padding:8px;
+  opacity:0;visibility:hidden;transform:translateY(-8px);transition:.2s;z-index:5}
+.menu>li.open .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:8px;
+  font-size:.92rem;font-weight:500;color:var(--ink);transition:.15s}
+.dropdown a:hover{background:var(--sky-soft);color:var(--teal)}
+.dropdown a .di{flex:none;width:30px;height:30px;border-radius:7px;background:var(--sky-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--teal)}
+.dropdown a .di svg{width:16px;height:16px}
+.nav-cta{display:flex;align-items:center;gap:10px}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{width:26px;height:2.5px;background:var(--ink);border-radius:2px;transition:.25s}
 
-/* ============ HERO ============ */
-.hero{position:relative;background:
-   radial-gradient(120% 90% at 88% -10%,rgba(230,0,126,.10),transparent 55%),
-   radial-gradient(80% 80% at 0% 110%,rgba(179,209,237,.22),transparent 60%),
-   var(--cream);overflow:hidden}
-.hero::before{content:"";position:absolute;top:-120px;right:-120px;width:520px;height:520px;
-  background:radial-gradient(circle,rgba(217,184,121,.16),transparent 70%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,64px);
-  align-items:center;padding-top:clamp(48px,7vw,86px);padding-bottom:clamp(48px,7vw,86px)}
-.hero-copy .eyebrow{display:block}
-.hero-copy h1{font-size:clamp(2.1rem,5.6vw,3.7rem);margin:16px 0 0}
-.hero-copy h1 b{font-weight:600;color:var(--pink)}
-.hero-copy .lead{font-size:clamp(1.05rem,2.4vw,1.22rem);color:var(--grey);margin-top:20px;max-width:30em}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
-.hero-trust{display:flex;align-items:center;gap:10px;margin-top:26px;color:var(--grey);font-size:.92rem}
-.hero-trust .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+/* ===== HERO ===== */
+.hero{position:relative;background:linear-gradient(180deg,var(--sky-soft),#fff);overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url('assets/img/hero-sky.jpg') center/cover no-repeat;opacity:.5}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(234,243,251,.4),#fff 92%)}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:880px;margin:0 auto;
+  padding-top:clamp(54px,8vw,96px);padding-bottom:clamp(54px,8vw,96px)}
+.hero .emblem{height:clamp(96px,15vw,134px);margin:0 auto 22px;filter:drop-shadow(0 8px 20px rgba(30,63,78,.18))}
+.hero .eyebrow{display:block}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);margin-top:14px;font-weight:300}
+.hero h1 .em{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+.hero .lead{font-size:clamp(1.04rem,2.4vw,1.2rem);color:var(--ink-soft);margin:20px auto 0;max-width:40em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:32px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;margin-top:26px;
+  color:var(--ink-soft);font-size:.92rem}
+.hero-tags span{display:flex;align-items:center;gap:7px}
+.hero-tags svg{width:16px;height:16px;color:var(--teal)}
 
-.hero-media{position:relative}
-.hero-media .frame{position:relative;border-radius:var(--radius);overflow:hidden;
-  box-shadow:var(--shadow-md);aspect-ratio:4/4.4}
-.hero-media .frame img{width:100%;height:100%;object-fit:cover}
-.hero-media .frame::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 45%,rgba(65,64,66,.55))}
-.hero-media .cap{position:absolute;left:22px;right:22px;bottom:20px;color:#fff;z-index:2}
-.hero-media .cap b{font-weight:600;font-size:1.05rem;display:block}
-.hero-media .cap span{font-size:.84rem;opacity:.9}
-.hero-media .ribbon-badge{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.95);
-  border-radius:12px;padding:9px 14px;display:flex;align-items:center;gap:9px;box-shadow:var(--shadow-sm);z-index:2}
-.hero-media .ribbon-badge img{height:30px}
-.hero-media .ribbon-badge span{font-size:.78rem;font-weight:600;color:var(--pink);line-height:1.2}
-.stat-float{position:absolute;right:-14px;bottom:34px;background:#fff;border-radius:14px;
-  padding:16px 20px;box-shadow:var(--shadow-md);text-align:center;z-index:3;border-top:3px solid var(--gold)}
-.stat-float b{display:block;font-weight:700;font-size:1.9rem;color:var(--pink);line-height:1}
-.stat-float span{font-size:.76rem;color:var(--grey)}
+/* ===== IN MEMORIAM (official banner, verbatim) ===== */
+.memoriam{background:var(--cream);padding:clamp(26px,4vw,40px) 0}
+.memoriam .frame{max-width:980px;margin:0 auto;border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;box-shadow:var(--shadow-sm)}
+.memoriam img{width:100%;display:block}
 
-/* ============ TRUST BAND ============ */
+/* ===== TRUST STRIP ===== */
 .trust{background:var(--ink);color:#fff}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
-  padding-top:30px;padding-bottom:30px}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding-top:30px;padding-bottom:30px}
 .trust .item{display:flex;gap:13px;align-items:flex-start}
-.trust .ic{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(217,184,121,.16);
-  display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.trust .ic{flex:none;width:44px;height:44px;border-radius:11px;background:rgba(194,154,78,.18);
+  display:flex;align-items:center;justify-content:center;color:var(--gold-soft)}
 .trust .ic svg{width:22px;height:22px}
 .trust b{display:block;font-weight:600;font-size:1rem}
-.trust span{font-size:.85rem;color:#b9b2ac}
+.trust span{font-size:.85rem;color:#aebcc2}
 
-/* ============ MISSION ============ */
-.mission{background:var(--white)}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.pillar{background:var(--cream);border:1px solid var(--grey-line);border-radius:var(--radius);
-  padding:34px 28px;text-align:center;transition:transform .25s,box-shadow .25s}
-.pillar:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
-.pillar .ribbon{width:62px;height:62px;margin:0 auto 18px;border-radius:50%;
-  background:var(--pink-soft);display:flex;align-items:center;justify-content:center;color:var(--pink)}
-.pillar .ribbon svg{width:32px;height:32px}
-.pillar h3{font-size:1.35rem;font-weight:600;color:var(--ink)}
-.pillar .th{color:var(--pink);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
-.pillar p{color:var(--grey);font-size:.96rem;margin-top:12px}
+/* ===== ABOUT ===== */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+.about-media{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:4/3.1}
+.about-media img{width:100%;height:100%;object-fit:cover}
+.about-media .badge{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.95);
+  border-radius:12px;padding:10px 16px;box-shadow:var(--shadow-sm);border-left:3px solid var(--gold)}
+.about-media .badge b{display:block;font-weight:700;color:var(--teal);font-size:1.5rem;line-height:1}
+.about-media .badge span{font-size:.78rem;color:var(--ink-soft)}
+.about-copy h2{font-size:clamp(1.7rem,4vw,2.5rem)}
+.about-copy .lead{color:var(--ink-soft);margin-top:16px}
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.vm .card{background:var(--sky-soft);border-radius:12px;padding:20px}
+.vm .card h3{font-size:1.1rem;font-weight:600;color:var(--teal);display:flex;align-items:center;gap:8px}
+.vm .card h3 svg{width:18px;height:18px}
+.vm .card p{font-size:.92rem;color:var(--ink-soft);margin-top:8px}
 
-/* ============ DONATE MODULE ============ */
-.donate{background:
-   linear-gradient(180deg,var(--pink-soft),transparent 40%),var(--white)}
-.donate-card{max-width:760px;margin:0 auto;background:#fff;border-radius:24px;
-  box-shadow:var(--shadow-md);overflow:hidden;border:1px solid var(--grey-line)}
-.donate-card .dc-head{background:var(--ink);color:#fff;padding:26px clamp(22px,4vw,40px);
-  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.donate-card .dc-head h3{color:#fff;font-weight:600;font-size:1.3rem}
-.donate-card .dc-head span{color:var(--gold);font-size:.86rem}
+/* ===== SERVICES (7 units) ===== */
+.services{background:var(--sky-soft)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;
+  transition:transform .22s,box-shadow .22s}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.svc .ic{width:52px;height:52px;border-radius:13px;background:var(--gold-grad-v);
+  display:flex;align-items:center;justify-content:center;color:#fff;margin-bottom:14px}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{font-size:1.06rem;font-weight:600;color:var(--ink)}
+.svc p{font-size:.88rem;color:var(--ink-soft);margin-top:7px}
+.svc.wide{grid-column:span 2;background:linear-gradient(120deg,var(--teal),var(--teal-deep));border:none;color:#fff;
+  display:flex;flex-direction:column;justify-content:center}
+.svc.wide h3{color:#fff;font-size:1.3rem}
+.svc.wide p{color:rgba(255,255,255,.86)}
+.svc.wide .ic{background:rgba(255,255,255,.16)}
+
+/* ===== PROJECTS ===== */
+.projects{background:#fff}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.proj{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);
+  background:#0b2530;aspect-ratio:3/3.5;transition:transform .25s,box-shadow .25s}
+.proj:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.proj img{width:100%;height:100%;object-fit:cover;opacity:.88;transition:.4s}
+.proj:hover img{transform:scale(1.05);opacity:1}
+.proj .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,50,62,.05) 35%,rgba(13,35,44,.9))}
+.proj .tx{position:absolute;left:22px;right:22px;bottom:22px;color:#fff;z-index:2}
+.proj .tx .k{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+.proj .tx h3{color:#fff;font-weight:600;font-size:1.22rem;margin-top:4px}
+.proj .tx p{font-size:.88rem;color:#dbe4e8;margin-top:6px}
+.proj-more{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.proj-more .chip{display:flex;align-items:center;gap:10px;background:var(--sky-soft);border-radius:11px;
+  padding:14px 16px;font-weight:500;font-size:.92rem}
+.proj-more .chip svg{width:20px;height:20px;color:var(--teal);flex:none}
+
+/* ===== NEWS ===== */
+.news{background:var(--cream)}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  transition:transform .22s,box-shadow .22s}
+.post:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.post .ph{aspect-ratio:16/9;overflow:hidden;background:var(--sky)}
+.post .ph img{width:100%;height:100%;object-fit:cover}
+.post .pb{padding:20px}
+.post .date{font-size:.78rem;color:var(--gold);font-weight:600;letter-spacing:.04em}
+.post h3{font-size:1.08rem;font-weight:600;color:var(--ink);margin-top:6px;line-height:1.4}
+.post .rm{margin-top:12px;font-size:.88rem;color:var(--teal);font-weight:600;display:inline-flex;gap:5px;align-items:center}
+
+/* ===== DONATE ===== */
+.donate{background:linear-gradient(180deg,var(--sky-soft),#fff 45%)}
+.donate-card{max-width:780px;margin:0 auto;background:#fff;border-radius:22px;box-shadow:var(--shadow-md);
+  overflow:hidden;border:1px solid var(--line)}
+.dc-head{background:var(--ink);color:#fff;padding:24px clamp(22px,4vw,38px);display:flex;
+  align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.dc-head h3{color:#fff;font-weight:600;font-size:1.25rem}
+.dc-head span{color:var(--gold-soft);font-size:.84rem}
 .toggle{display:inline-flex;background:rgba(255,255,255,.12);border-radius:999px;padding:4px}
-.toggle button{background:none;border:none;color:#d8d2cc;font-family:inherit;font-weight:600;
-  font-size:.9rem;padding:9px 20px;border-radius:999px;cursor:pointer;transition:.2s;white-space:nowrap}
-.toggle button.on{background:#fff;color:var(--pink)}
-.dc-body{padding:clamp(24px,4vw,40px)}
+.toggle button{background:none;border:none;color:#cdd8dc;font-family:inherit;font-weight:600;
+  font-size:.88rem;padding:9px 18px;border-radius:999px;cursor:pointer;transition:.2s;white-space:nowrap}
+.toggle button.on{background:#fff;color:var(--teal)}
+.dc-body{padding:clamp(24px,4vw,38px)}
 .amt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.amt{position:relative;border:1.6px solid var(--grey-line);border-radius:14px;background:#fff;
-  padding:18px 10px;text-align:center;cursor:pointer;transition:.18s;font-family:inherit}
-.amt b{display:block;font-size:1.4rem;font-weight:700;color:var(--ink)}
-.amt span{font-size:.74rem;color:var(--grey)}
-.amt:hover{border-color:var(--pink-tint)}
-.amt.on{border-color:var(--pink);background:var(--pink-soft);box-shadow:0 6px 18px rgba(230,0,126,.14)}
-.amt.on b{color:var(--pink)}
-.amt.custom{grid-column:span 3;display:flex;align-items:center;gap:10px;justify-content:center;padding:14px}
-.amt.custom label{font-weight:600;color:var(--grey);font-size:.95rem;white-space:nowrap}
-.amt.custom .in{flex:1;display:flex;align-items:center;border:1.6px solid var(--grey-line);
-  border-radius:10px;padding:8px 14px;max-width:260px;background:#fff}
-.amt.custom .in:focus-within{border-color:var(--pink)}
-.amt.custom .in b{font-size:1.1rem;color:var(--grey);font-weight:600}
-.amt.custom input{border:none;outline:none;font-family:inherit;font-size:1.2rem;font-weight:700;
+.amt{border:1.6px solid var(--line);border-radius:13px;background:#fff;padding:17px 8px;text-align:center;
+  cursor:pointer;transition:.18s;font-family:inherit}
+.amt b{display:block;font-size:1.34rem;font-weight:700;color:var(--ink)}
+.amt span{font-size:.74rem;color:var(--ink-soft)}
+.amt:hover{border-color:var(--sky)}
+.amt.on{border-color:var(--teal);background:var(--sky-soft);box-shadow:0 6px 16px rgba(44,143,177,.14)}
+.amt.on b{color:var(--teal)}
+.amt.custom{grid-column:span 3;display:flex;align-items:center;gap:10px;justify-content:center;padding:13px}
+.amt.custom label{font-weight:600;color:var(--ink-soft);font-size:.94rem;white-space:nowrap}
+.amt.custom .in{display:flex;align-items:center;border:1.6px solid var(--line);border-radius:10px;
+  padding:8px 14px;max-width:260px;background:#fff}
+.amt.custom .in:focus-within{border-color:var(--teal)}
+.amt.custom .in b{font-size:1.1rem;color:var(--ink-soft);font-weight:600}
+.amt.custom input{border:none;outline:none;font-family:inherit;font-size:1.18rem;font-weight:700;
   width:100%;color:var(--ink);background:none;margin-left:6px}
 .impact{margin-top:16px;background:var(--cream);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;
-  padding:12px 16px;font-size:.95rem;color:var(--ink);display:flex;gap:9px;align-items:center}
-.impact svg{flex:none;width:20px;height:20px;color:var(--pink)}
-.impact em{font-style:normal;font-weight:600;color:var(--pink)}
+  padding:12px 16px;font-size:.94rem;color:var(--ink);display:flex;gap:9px;align-items:center}
+.impact svg{flex:none;width:20px;height:20px;color:var(--teal)}
+.impact em{font-style:normal;font-weight:600;color:var(--teal)}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
 .field{display:flex;flex-direction:column;gap:6px}
 .field.full{grid-column:span 2}
-.field label{font-size:.85rem;font-weight:600;color:var(--grey)}
-.field input{font-family:inherit;font-size:1rem;padding:12px 14px;border:1.5px solid var(--grey-line);
+.field label{font-size:.85rem;font-weight:600;color:var(--ink-soft)}
+.field input{font-family:inherit;font-size:1rem;padding:12px 14px;border:1.5px solid var(--line);
   border-radius:10px;color:var(--ink);transition:.18s}
-.field input:focus{outline:none;border-color:var(--pink)}
-.summary{display:flex;align-items:center;justify-content:space-between;margin-top:22px;
-  padding:16px 20px;background:var(--ink);color:#fff;border-radius:12px;flex-wrap:wrap;gap:10px}
-.summary .s-l span{font-size:.82rem;color:#bdb6b0}
-.summary .s-l b{display:block;font-size:1.6rem;font-weight:700;color:#fff}
-.summary .s-l b small{font-size:.9rem;font-weight:400;color:var(--gold)}
-.pay-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px;flex-wrap:wrap}
-.pay-row img{height:26px;border-radius:4px}
-.pay-row .secure{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--grey)}
-.pay-row .secure svg{width:15px;height:15px;color:var(--pink)}
-.demo-note{margin-top:14px;text-align:center;font-size:.8rem;color:var(--grey)}
+.field input:focus{outline:none;border-color:var(--teal)}
+.summary{display:flex;align-items:center;justify-content:space-between;margin-top:22px;padding:16px 20px;
+  background:var(--ink);color:#fff;border-radius:12px;flex-wrap:wrap;gap:10px}
+.summary .s-l span{font-size:.82rem;color:#aebcc2}
+.summary .s-l b{display:block;font-size:1.55rem;font-weight:700;color:#fff}
+.summary .s-l b small{font-size:.88rem;font-weight:400;color:var(--gold-soft)}
+.demo-note{margin-top:14px;text-align:center;font-size:.8rem;color:var(--ink-soft)}
 
-/* ============ CHANNELS ============ */
-.channels{background:var(--cream)}
+/* bank channels */
+.channels{background:#fff;border-top:1px solid var(--line)}
 .ch-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
-.ch-card{background:#fff;border:1px solid var(--grey-line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm)}
-.ch-card h3{font-size:1.3rem;font-weight:600;display:flex;align-items:center;gap:10px}
+.ch-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.ch-card h3{font-size:1.2rem;font-weight:600;display:flex;align-items:center;gap:10px}
 .ch-card h3 .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--gold-grad);
-  color:#5a3f15;font-size:.9rem;font-weight:700;display:flex;align-items:center;justify-content:center}
-.ch-card .acct-name{margin-top:16px;font-weight:600;color:var(--pink)}
-.bank{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--grey-line)}
+  color:#553f12;font-size:.9rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ch-card .acct{margin-top:14px;font-weight:600;color:var(--teal)}
+.bank{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
 .bank:last-of-type{border-bottom:none}
-.bank img{width:48px;height:48px;border-radius:8px;flex:none;object-fit:cover}
-.bank .b-name{font-size:.92rem;color:var(--grey)}
+.bank img{width:46px;height:46px;border-radius:8px;flex:none;object-fit:cover}
+.bank .b-name{font-size:.9rem;color:var(--ink-soft)}
 .bank .b-no{font-weight:600;color:var(--ink)}
-.ch-note{margin-top:18px;font-size:.88rem;color:var(--grey);background:var(--cream);
+.ch-note{margin-top:16px;font-size:.86rem;color:var(--ink-soft);background:#fff;border:1px solid var(--line);
   border-radius:10px;padding:12px 14px}
-.ch-note b{color:var(--ink)}
-.ch-side .mini{display:flex;gap:13px;align-items:flex-start;margin-bottom:20px}
+.ch-side .mini{display:flex;gap:13px;align-items:flex-start;margin-bottom:18px}
 .ch-side .mini:last-child{margin-bottom:0}
-.ch-side .mini .ic{flex:none;width:40px;height:40px;border-radius:11px;background:var(--pink-soft);
-  display:flex;align-items:center;justify-content:center;color:var(--pink)}
+.ch-side .mini .ic{flex:none;width:40px;height:40px;border-radius:11px;background:var(--sky-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--teal)}
 .ch-side .mini .ic svg{width:20px;height:20px}
 .ch-side .mini b{font-weight:600;display:block}
-.ch-side .mini span{font-size:.9rem;color:var(--grey)}
+.ch-side .mini span{font-size:.9rem;color:var(--ink-soft)}
 
-/* ============ PROJECTS ============ */
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.proj{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);
-  background:#000;aspect-ratio:3/3.6;transition:transform .25s,box-shadow .25s}
-.proj:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
-.proj img{width:100%;height:100%;object-fit:cover;opacity:.92;transition:.4s}
-.proj:hover img{transform:scale(1.05);opacity:1}
-.proj .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(20,20,22,.86))}
-.proj .tx{position:absolute;left:22px;right:22px;bottom:22px;color:#fff;z-index:2}
-.proj .tx .k{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.proj .tx h3{color:#fff;font-weight:600;font-size:1.3rem;margin-top:4px}
-.proj .tx p{font-size:.9rem;color:#e3ded9;margin-top:6px}
+/* ===== CONTACT ===== */
+.contact{background:var(--sky-soft)}
+.ct-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:stretch}
+.ct-info{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.ct-row{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.ct-row:last-child{border-bottom:none}
+.ct-row .ic{flex:none;width:42px;height:42px;border-radius:11px;background:var(--sky-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--teal)}
+.ct-row .ic svg{width:20px;height:20px}
+.ct-row b{display:block;font-weight:600;font-size:.95rem}
+.ct-row span,.ct-row a{font-size:.92rem;color:var(--ink-soft)}
+.ct-row a:hover{color:var(--teal)}
+.ct-map{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);min-height:340px;border:1px solid var(--line);background:var(--sky-soft)}
+.ct-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.map-fallback{position:absolute;right:12px;bottom:12px;background:#fff;color:var(--teal);font-weight:600;
+  font-size:.85rem;padding:9px 16px;border-radius:999px;box-shadow:var(--shadow-sm);z-index:2}
+.map-fallback:hover{background:var(--teal);color:#fff}
 
-/* ============ ROYAL STRIP ============ */
-.royal{background:var(--ink);color:#fff;position:relative;overflow:hidden}
-.royal::before{content:"";position:absolute;inset:0;
-  background:radial-gradient(70% 120% at 100% 0,rgba(217,184,121,.18),transparent 55%)}
-.royal .wrap{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,56px);
-  align-items:center;padding-top:clamp(46px,6vw,72px);padding-bottom:clamp(46px,6vw,72px)}
-.royal .mark{width:118px;height:118px;border-radius:50%;background:#fff;flex:none;
-  display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(217,184,121,.25)}
-.royal .mark img{width:78px}
-.royal .eyebrow{color:var(--gold)}
-.royal h2{color:#fff;font-size:clamp(1.5rem,3.6vw,2.2rem);margin-top:12px;font-weight:300}
-.royal p{color:#cfc7c0;margin-top:14px;max-width:60ch}
-.royal .cta{margin-top:24px}
-
-/* ============ FOOTER ============ */
-footer{background:#2c2b2c;color:#bdb6b0;font-size:.94rem}
-.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;
-  padding-top:clamp(46px,6vw,72px);padding-bottom:46px}
-.f-brand img{height:60px;margin-bottom:16px}
+/* ===== FOOTER ===== */
+footer{background:#16323E;color:#a9bcc4;font-size:.93rem}
+.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;padding:clamp(44px,6vw,70px) 0 42px}
+.f-brand img{height:64px;margin-bottom:14px}
 .f-brand b{color:#fff;font-weight:600;display:block}
-.f-brand p{margin-top:10px;max-width:34ch}
-.f-col h4{color:#fff;font-weight:600;font-size:1rem;margin-bottom:8px}
-.f-col h4 + .gl{width:38px;height:2px;background:var(--gold);margin-bottom:16px;border-radius:2px}
-.f-row{display:flex;gap:11px;align-items:flex-start;margin-bottom:13px}
-.f-row svg{width:18px;height:18px;flex:none;color:var(--gold);margin-top:3px}
-.f-row a:hover{color:#fff}
-.social{display:flex;gap:12px;margin-top:6px}
-.social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:center;transition:.2s}
-.social a:hover{background:var(--pink);transform:translateY(-3px)}
-.social svg{width:19px;height:19px;color:#fff}
-.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;display:flex;
-  justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;color:#8d8781}
-.f-bottom .demo-flag{color:var(--gold)}
+.f-brand p{margin-top:9px;max-width:36ch;font-size:.88rem}
+.f-col h4{color:#fff;font-weight:600;font-size:1rem;margin-bottom:6px}
+.f-col h4 + .gl{width:38px;height:2px;background:var(--gold);margin-bottom:15px;border-radius:2px}
+.f-col a{display:block;padding:5px 0;color:#a9bcc4}
+.f-col a:hover{color:#fff}
+.f-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px}
+.f-row svg{width:17px;height:17px;flex:none;color:var(--gold-soft);margin-top:3px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;display:flex;justify-content:space-between;
+  gap:12px;flex-wrap:wrap;font-size:.8rem;color:#7e939c}
+.f-bottom .demo{color:var(--gold-soft)}
 
-/* ============ TOAST ============ */
-.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(120px);
-  background:var(--ink);color:#fff;padding:16px 22px;border-radius:14px;box-shadow:var(--shadow-md);
-  max-width:90vw;display:flex;gap:12px;align-items:center;z-index:200;transition:transform .35s cubic-bezier(.2,.9,.3,1.2)}
+/* ===== TOAST ===== */
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(120px);background:var(--ink);
+  color:#fff;padding:15px 22px;border-radius:13px;box-shadow:var(--shadow-md);max-width:90vw;display:flex;
+  gap:12px;align-items:center;z-index:200;transition:transform .35s cubic-bezier(.2,.9,.3,1.2)}
 .toast.show{transform:translateX(-50%) translateY(0)}
-.toast svg{width:24px;height:24px;color:var(--gold);flex:none}
+.toast svg{width:24px;height:24px;color:var(--gold-soft);flex:none}
 .toast b{font-weight:600;display:block}
-.toast span{font-size:.85rem;color:#cfc7c0}
+.toast span{font-size:.85rem;color:#cdd8dc}
 
-/* ============ MOBILE MENU ============ */
-.mobile{position:fixed;inset:0;background:rgba(44,43,44,.5);backdrop-filter:blur(3px);
-  z-index:60;opacity:0;pointer-events:none;transition:.25s}
+/* ===== MOBILE MENU ===== */
+.mobile{position:fixed;inset:0;background:rgba(22,50,62,.5);backdrop-filter:blur(3px);z-index:80;
+  opacity:0;pointer-events:none;transition:.25s}
 .mobile.open{opacity:1;pointer-events:all}
-.mobile-panel{position:absolute;top:0;right:0;width:min(82vw,340px);height:100%;background:#fff;
-  box-shadow:-10px 0 40px rgba(0,0,0,.18);transform:translateX(100%);transition:.3s;
-  padding:24px;display:flex;flex-direction:column;gap:6px}
+.mobile-panel{position:absolute;top:0;right:0;width:min(86vw,360px);height:100%;background:#fff;
+  box-shadow:-10px 0 40px rgba(0,0,0,.18);transform:translateX(100%);transition:.3s;display:flex;
+  flex-direction:column;overflow-y:auto}
 .mobile.open .mobile-panel{transform:translateX(0)}
-.mobile-panel .mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.mobile-panel .mh img{height:46px}
-.mobile-panel .x{background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--grey);line-height:1}
-.mobile-panel a{padding:13px 6px;font-weight:500;border-bottom:1px solid var(--grey-line);color:var(--ink)}
-.mobile-panel .btn{display:flex;justify-content:center;align-items:center;margin-top:16px}
+.mobile-panel .mh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;
+  border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.mobile-panel .mh img{height:44px}
+.mobile-panel .x{background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--ink-soft);line-height:1}
+.macc{border-bottom:1px solid var(--line)}
+.macc>button{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;
+  border:none;font-family:inherit;font-size:1rem;font-weight:600;color:var(--ink);padding:15px 20px;cursor:pointer}
+.macc>button svg{width:16px;height:16px;transition:transform .2s}
+.macc.open>button svg{transform:rotate(180deg)}
+.macc .sub{max-height:0;overflow:hidden;transition:max-height .3s;background:var(--sky-soft)}
+.macc.open .sub{max-height:500px}
+.macc .sub a{display:block;padding:11px 20px 11px 34px;font-size:.92rem;color:var(--ink-soft)}
+.macc .sub a:hover{color:var(--teal)}
+.m-cta{padding:18px 20px}
+.m-cta .btn{display:flex;width:100%}
 
-/* ============ RESPONSIVE ============ */
-@media(max-width:980px){
+/* ===== RESPONSIVE ===== */
+@media(max-width:1080px){
   .menu{display:none}
   .burger{display:flex}
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-media{order:-1;max-width:440px;margin:0 auto;width:100%}
-  .hero-media .frame{aspect-ratio:4/3.3}
-  .trust .wrap{grid-template-columns:repeat(2,1fr);gap:24px}
-  .pillars{grid-template-columns:1fr}
-  .ch-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+  .about-grid{grid-template-columns:1fr;gap:34px}
+  .about-media{order:-1;max-width:480px;margin:0 auto;width:100%}
+  .trust .wrap{grid-template-columns:repeat(2,1fr);gap:22px}
   .proj-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
-  .royal .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .proj-more{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+  .ch-grid{grid-template-columns:1fr}
+  .ct-grid{grid-template-columns:1fr}
   .f-top{grid-template-columns:1fr 1fr}
+  .vm{grid-template-columns:1fr}
 }
 @media(max-width:560px){
-  .topbar .tag span{display:none}
-  .nav-cta .btn{padding:11px 18px;font-size:.92rem}
+  .topbar .org span{display:none}
   .brand .bt{display:none}
-  .brand img{height:48px}
+  .brand img{height:50px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc.wide{grid-column:span 1}
   .amt-grid{grid-template-columns:repeat(2,1fr)}
   .amt.custom{grid-column:span 2}
   .fields{grid-template-columns:1fr}
   .field.full{grid-column:span 1}
   .trust .wrap{grid-template-columns:1fr}
+  .proj-more{grid-template-columns:1fr}
   .f-top{grid-template-columns:1fr}
-  .hero-copy .gold-line{margin-left:0}
-  .stat-float{right:8px;bottom:14px;padding:12px 16px}
-  .stat-float b{font-size:1.5rem}
 }
 </style>
 </head>
-<body>
+<body class="lang-th">
 
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="wrap">
-    <div class="tag"><b>เฉลิมพระเกียรติ</b><span>Queen Sirikit Centre for Breast Cancer Foundation</span></div>
+    <div class="org"><b>โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย</b> <span data-th="· King Chulalongkorn Memorial Hospital, Thai Red Cross Society" data-en="· King Chulalongkorn Memorial Hospital, Thai Red Cross Society"></span></div>
     <div class="util">
-      <a href="#contact">โทรสาร 02-214-6047</a>
-      <span class="lang"><span class="on">ไทย</span><i>·</i><span>EN</span></span>
+      <a href="tel:022564693"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2A19.8 19.8 0 013 5.2 2 2 0 015 3h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L9 10.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg><span data-th="02-256-4693" data-en="02-256-4693"></span></a>
+      <div class="langsw">
+        <button data-lang="th" class="on">ไทย</button>
+        <button data-lang="en">EN</button>
+      </div>
     </div>
   </div>
 </div>
@@ -370,22 +412,52 @@ footer{background:#2c2b2c;color:#bdb6b0;font-size:.94rem}
 <header id="header">
   <div class="wrap nav">
     <a href="#top" class="brand">
-      <img src="assets/img/logo.png" alt="โลโก้มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ">
+      <img src="assets/img/logo-emblem.png" alt="ตราสัญลักษณ์ ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม">
       <span class="bt">
-        <b>มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ</b>
-        <span>Queen Sirikit Centre for Breast Cancer Foundation</span>
+        <b data-th="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม" data-en="Queen Sirikit Centre for Breast Cancer"></b>
+        <span data-th="โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย" data-en="King Chulalongkorn Memorial Hospital, Thai Red Cross Society"></span>
       </span>
     </a>
-    <nav class="menu">
-      <a href="#mission">พันธกิจ</a>
-      <a href="#donate">ร่วมบริจาค</a>
-      <a href="#channels">ช่องทางบริจาค</a>
-      <a href="#projects">โครงการของเรา</a>
-      <a href="#contact">ติดต่อ</a>
-    </nav>
+    <ul class="menu" id="menu">
+      <li>
+        <button data-th="เกี่ยวกับศูนย์ฯ" data-en="About Us"></button><span style="display:none"></span>
+        <div class="dropdown">
+          <a href="#about" data-th="ความเป็นมา" data-en="Background"></a>
+          <a href="#about" data-th="วิสัยทัศน์ พันธกิจ" data-en="Vision & Mission"></a>
+          <a href="#services" data-th="ทีมแพทย์ผู้เชี่ยวชาญ" data-en="Expert Medical Team"></a>
+          <a href="#news" data-th="ข่าวสารและกิจกรรม" data-en="News & Activities"></a>
+          <a href="#news" data-th="บทความวิชาการ" data-en="Academic Articles"></a>
+        </div>
+      </li>
+      <li>
+        <button data-th="การบริการ" data-en="Services"></button>
+        <div class="dropdown">
+          <a href="#services" data-th="คลินิกมะเร็งเต้านมครบวงจร (OPD)" data-en="Comprehensive Breast Cancer Clinic (OPD)"></a>
+          <a href="#services" data-th="หน่วยรังสีวิทยาเต้านม" data-en="Breast Radiology Unit"></a>
+          <a href="#services" data-th="หน่วยพยาธิวิทยาเต้านม" data-en="Breast Pathology Unit"></a>
+          <a href="#services" data-th="หน่วยให้ยาเคมีบำบัด" data-en="Chemotherapy Unit"></a>
+          <a href="#services" data-th="ห้องผ่าตัดโรคเต้านม" data-en="Breast Surgery Operating Room"></a>
+          <a href="#services" data-th="หอผู้ป่วยระยะสั้น" data-en="Short-term Ward"></a>
+          <a href="#services" data-th="เครื่องมือและอุปกรณ์ทางแพทย์" data-en="Medical Equipment & Devices"></a>
+        </div>
+      </li>
+      <li>
+        <button data-th="โครงการของศูนย์ฯ" data-en="QSCBC Projects"></button>
+        <div class="dropdown">
+          <a href="#projects" data-th="บ้านพิงพัก (Pink Park Village)" data-en="Pink Park Village"></a>
+          <a href="#projects" data-th="ภูมิคุ้มกันบำบัด (ระดับเซลล์)" data-en="Cellular Immunotherapy"></a>
+          <a href="#projects" data-th="สร้างความตระหนักรู้สุขภาพเต้านม" data-en="Breast Cancer Awareness Campaign"></a>
+          <a href="#projects" data-th="สลัม โปรเจค" data-en="Slum Project"></a>
+          <a href="#projects" data-th="เพื่อนช่วยเพื่อน" data-en="Friend Helps Friend"></a>
+          <a href="#projects" data-th="เต้นรำบำบัด" data-en="Dance Therapy"></a>
+          <a href="#projects" data-th="ประชุมวิชาการระดับนานาชาติ" data-en="International Conferences"></a>
+        </div>
+      </li>
+      <li><a href="#contact" data-th="ติดต่อเรา" data-en="Contact"></a></li>
+    </ul>
     <div class="nav-cta">
-      <a href="#donate" class="btn btn-pink">บริจาคตอนนี้</a>
-      <button class="burger" id="burger" aria-label="เมนู"><span></span><span></span><span></span></button>
+      <a href="#donate" class="btn btn-teal" data-th="บริจาค" data-en="Donate"></a>
+      <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -394,283 +466,398 @@ footer{background:#2c2b2c;color:#bdb6b0;font-size:.94rem}
 <div class="mobile" id="mobile">
   <div class="mobile-panel">
     <div class="mh">
-      <img src="assets/img/logo.png" alt="">
-      <button class="x" id="mclose" aria-label="ปิด">&times;</button>
+      <img src="assets/img/logo-emblem.png" alt="">
+      <button class="x" id="mclose" aria-label="close">&times;</button>
     </div>
-    <a href="#mission">พันธกิจ</a>
-    <a href="#donate">ร่วมบริจาค</a>
-    <a href="#channels">ช่องทางบริจาค</a>
-    <a href="#projects">โครงการของเรา</a>
-    <a href="#contact">ติดต่อ</a>
-    <a href="#donate" class="btn btn-pink">บริจาคตอนนี้</a>
+    <div class="macc">
+      <button data-th="เกี่ยวกับศูนย์ฯ" data-en="About Us"></button>
+      <div class="sub">
+        <a href="#about" data-th="ความเป็นมา" data-en="Background"></a>
+        <a href="#about" data-th="วิสัยทัศน์ พันธกิจ" data-en="Vision & Mission"></a>
+        <a href="#services" data-th="ทีมแพทย์ผู้เชี่ยวชาญ" data-en="Expert Medical Team"></a>
+        <a href="#news" data-th="ข่าวสารและกิจกรรม" data-en="News & Activities"></a>
+        <a href="#news" data-th="บทความวิชาการ" data-en="Academic Articles"></a>
+      </div>
+    </div>
+    <div class="macc">
+      <button data-th="การบริการ" data-en="Services"></button>
+      <div class="sub">
+        <a href="#services" data-th="คลินิกมะเร็งเต้านมครบวงจร (OPD)" data-en="Comprehensive Breast Cancer Clinic (OPD)"></a>
+        <a href="#services" data-th="หน่วยรังสีวิทยาเต้านม" data-en="Breast Radiology Unit"></a>
+        <a href="#services" data-th="หน่วยพยาธิวิทยาเต้านม" data-en="Breast Pathology Unit"></a>
+        <a href="#services" data-th="หน่วยให้ยาเคมีบำบัด" data-en="Chemotherapy Unit"></a>
+        <a href="#services" data-th="ห้องผ่าตัดโรคเต้านม" data-en="Breast Surgery Operating Room"></a>
+        <a href="#services" data-th="หอผู้ป่วยระยะสั้น" data-en="Short-term Ward"></a>
+        <a href="#services" data-th="เครื่องมือและอุปกรณ์ทางแพทย์" data-en="Medical Equipment & Devices"></a>
+      </div>
+    </div>
+    <div class="macc">
+      <button data-th="โครงการของศูนย์ฯ" data-en="QSCBC Projects"></button>
+      <div class="sub">
+        <a href="#projects" data-th="บ้านพิงพัก (Pink Park Village)" data-en="Pink Park Village"></a>
+        <a href="#projects" data-th="ภูมิคุ้มกันบำบัด (ระดับเซลล์)" data-en="Cellular Immunotherapy"></a>
+        <a href="#projects" data-th="สร้างความตระหนักรู้สุขภาพเต้านม" data-en="Awareness Campaign"></a>
+        <a href="#projects" data-th="สลัม โปรเจค" data-en="Slum Project"></a>
+        <a href="#projects" data-th="เพื่อนช่วยเพื่อน" data-en="Friend Helps Friend"></a>
+        <a href="#projects" data-th="เต้นรำบำบัด" data-en="Dance Therapy"></a>
+        <a href="#projects" data-th="ประชุมวิชาการระดับนานาชาติ" data-en="International Conferences"></a>
+      </div>
+    </div>
+    <div class="macc"><button class="solo" onclick="location.hash='#contact'" data-th="ติดต่อเรา" data-en="Contact" style="cursor:pointer"></button></div>
+    <div class="m-cta"><a href="#donate" class="btn btn-teal" data-th="บริจาค" data-en="Donate"></a></div>
   </div>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">Queen Sirikit Centre for Breast Cancer Foundation</span>
-      <h1>ทุกการให้ คือ<b>พลัง</b><br>ของการต่อสู้กับมะเร็งเต้านม</h1>
-      <p class="lead">ร่วมเป็นกำลังใจและทุนทรัพย์ให้ผู้ป่วยมะเร็งเต้านม ผ่านการ <b>ป้องกัน · รักษา · ดูแล</b> อย่างทั่วถึง โดยมูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ</p>
-      <div class="hero-cta">
-        <a href="#donate" class="btn btn-pink btn-lg">บริจาคตอนนี้</a>
-        <a href="#channels" class="btn btn-ghost btn-lg">ดูช่องทางบริจาค</a>
-      </div>
-      <div class="hero-trust"><span class="dot"></span>มูลนิธิจดทะเบียน · ใบเสร็จลดหย่อนภาษีได้ · บริจาคปลอดภัย</div>
+  <div class="bg"></div>
+  <div class="wrap hero-inner">
+    <img src="assets/img/logo-emblem.png" class="emblem" alt="ตราสัญลักษณ์ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม">
+    <span class="eyebrow" data-th="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม" data-en="Queen Sirikit Centre for Breast Cancer"></span>
+    <h1><span class="em" data-th="คุณไม่ได้อยู่ลำพัง" data-en="You are not alone"></span></h1>
+    <p class="lead" data-th="ดูแลผู้ป่วยมะเร็งเต้านมอย่างครบวงจร ด้วยทีมแพทย์ผู้เชี่ยวชาญและเทคโนโลยีที่ทันสมัย ตั้งแต่การตรวจคัดกรอง วินิจฉัย รักษา ไปจนถึงการฟื้นฟูร่างกายและจิตใจ" data-en="Comprehensive care for breast cancer patients — from screening and diagnosis to treatment and holistic rehabilitation — by a team of specialists with advanced technology."></p>
+    <div class="hero-cta">
+      <a href="#donate" class="btn btn-teal btn-lg" data-th="ร่วมบริจาค" data-en="Donate Now"></a>
+      <a href="#about" class="btn btn-ghost btn-lg" data-th="ทำความรู้จักศูนย์ฯ" data-en="About the Centre"></a>
     </div>
-    <div class="hero-media">
-      <div class="frame">
-        <img src="assets/img/park-aerial.jpg" alt="โครงการบ้านพักพิง Pink Park Village ของมูลนิธิ">
-        <div class="ribbon-badge">
-          <img src="assets/img/logo.png" alt="">
-          <span>ใต้ร่ม<br>การกุศล</span>
-        </div>
-        <div class="cap">
-          <b>Pink Park Village</b>
-          <span>บ้านพักพิงเพื่อผู้ป่วยมะเร็งเต้านม</span>
-        </div>
-      </div>
-      <div class="stat-float">
-        <b>98%</b>
-        <span>ของเงินบริจาค<br>สู่พันธกิจช่วยผู้ป่วย</span>
-      </div>
+    <div class="hero-tags">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span data-th="คลินิกครบวงจร" data-en="Comprehensive clinic"></span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg><span data-th="ทีมแพทย์ผู้เชี่ยวชาญ" data-en="Specialist team"></span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg><span data-th="ดูแลกายและใจ" data-en="Body & mind care"></span></span>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAND -->
+<!-- IN MEMORIAM (official banner, verbatim) -->
+<section class="memoriam" aria-label="In Memoriam">
+  <div class="wrap">
+    <div class="frame">
+      <img src="assets/img/in-memoriam.jpg" alt="In Memoriam — Her Majesty Queen Sirikit the Queen Mother, Royal Patron of the Queen Sirikit Centre for Breast Cancer">
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
 <div class="trust">
   <div class="wrap">
     <div class="item">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-      <div><b>ลดหย่อนภาษีได้</b><span>ออกใบเสร็จในนามมูลนิธิ</span></div>
-    </div>
-    <div class="item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div>
-      <div><b>โปร่งใส ตรวจสอบได้</b><span>มูลนิธิจดทะเบียนถูกต้อง</span></div>
+      <div><b data-th="โรงพยาบาลจุฬาลงกรณ์" data-en="Chulalongkorn Hospital"></b><span data-th="ภายใต้สภากาชาดไทย" data-en="Under the Thai Red Cross"></span></div>
     </div>
     <div class="item">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
-      <div><b>บริจาคออนไลน์ปลอดภัย</b><span>รองรับบัตรเครดิต/โอน</span></div>
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
+      <div><b data-th="ทีมสหสาขาวิชาชีพ" data-en="Multidisciplinary team"></b><span data-th="แพทย์ พยาบาล นักรังสี" data-en="Doctors, nurses, radiologists"></span></div>
+    </div>
+    <div class="item">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 13h6"/></svg></div>
+      <div><b data-th="ครบวงจรในที่เดียว" data-en="All-in-one care"></b><span data-th="คัดกรอง–รักษา–ฟื้นฟู" data-en="Screen · treat · rehabilitate"></span></div>
     </div>
     <div class="item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg></div>
-      <div><b>ทุกบาทมีความหมาย</b><span>สู่การป้องกัน รักษา ดูแล</span></div>
+      <div><b data-th="บริจาคลดหย่อนภาษีได้" data-en="Tax-deductible giving"></b><span data-th="ผ่านมูลนิธิฯ" data-en="Through the Foundation"></span></div>
     </div>
   </div>
 </div>
 
-<!-- MISSION -->
-<section class="section mission" id="mission">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">พันธกิจของเรา</span>
-      <h2>ป้องกัน · รักษา · ดูแล</h2>
-      <p>สามเสาหลักที่เงินบริจาคของคุณจะถูกส่งต่อ เพื่อให้ผู้หญิงไทยห่างไกลจากมะเร็งเต้านม</p>
-      <div class="gold-line"></div>
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media">
+      <img src="assets/img/park-aerial.jpg" alt="โครงการบ้านพิงพัก Pink Park Village">
+      <div class="badge"><b data-th="ครบวงจร" data-en="End-to-end"></b><span data-th="ดูแลครบทุกขั้นตอนการรักษา" data-en="care across every stage"></span></div>
     </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="ribbon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-        <h3>ป้องกัน</h3>
-        <div class="th">Prevention</div>
-        <p>รณรงค์ให้ความรู้และส่งเสริมการตรวจคัดกรองตั้งแต่ระยะเริ่มต้น เพราะการรู้เร็วช่วยชีวิตได้</p>
-      </div>
-      <div class="pillar">
-        <div class="ribbon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg></div>
-        <h3>รักษา</h3>
-        <div class="th">Treatment</div>
-        <p>สนับสนุนการเข้าถึงการรักษาที่ได้มาตรฐานสำหรับผู้ป่วย โดยเฉพาะผู้ที่ขาดแคลนทุนทรัพย์</p>
-      </div>
-      <div class="pillar">
-        <div class="ribbon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
-        <h3>ดูแล</h3>
-        <div class="th">Care</div>
-        <p>ดูแลคุณภาพชีวิตและจิตใจผู้ป่วยอย่างต่อเนื่อง ผ่านบ้านพักพิงและโครงการเพื่อชุมชน</p>
+    <div class="about-copy">
+      <span class="eyebrow" data-th="เกี่ยวกับศูนย์ฯ" data-en="About the Centre"></span>
+      <h2 data-th="ความเป็นมาและเจตนารมณ์" data-en="Our Background & Purpose"></h2>
+      <p class="lead" data-th="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย ก่อตั้งขึ้นเพื่อให้การดูแลผู้ป่วยมะเร็งเต้านมอย่างครบวงจรและเข้าถึงได้ ด้วยมาตรฐานการแพทย์ระดับสากล" data-en="The Queen Sirikit Centre for Breast Cancer at King Chulalongkorn Memorial Hospital, Thai Red Cross Society, was established to provide comprehensive, accessible breast cancer care to international medical standards."></p>
+      <div class="vm">
+        <div class="card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg><span data-th="วิสัยทัศน์" data-en="Vision"></span></h3>
+          <p data-th="เป็นศูนย์ความเป็นเลิศด้านการดูแลรักษาโรคมะเร็งเต้านมแบบครบวงจรของภูมิภาค" data-en="To be a regional centre of excellence in comprehensive breast cancer care."></p>
+        </div>
+        <div class="card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M21 12a9 9 0 11-6.2-8.5"/></svg><span data-th="พันธกิจ" data-en="Mission"></span></h3>
+          <p data-th="ตรวจคัดกรอง วินิจฉัย รักษา ฟื้นฟู และส่งเสริมความรู้ด้านสุขภาพเต้านมแก่ประชาชน" data-en="Screening, diagnosis, treatment, rehabilitation, and public education on breast health."></p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DONATE MODULE -->
-<section class="section donate" id="donate">
+<!-- SERVICES (7 units) -->
+<section class="section services" id="services">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">ร่วมบริจาค</span>
-      <h2>เลือกจำนวนที่อยากร่วมให้</h2>
-      <p>บริจาคครั้งเดียว หรือสมทบทุกเดือน — เลือกได้ตามกำลัง ทุกยอดออกใบเสร็จลดหย่อนภาษีได้</p>
+      <span class="eyebrow" data-th="การบริการ" data-en="Our Services"></span>
+      <h2 data-th="คลินิกและหน่วยบริการครบวงจร" data-en="Comprehensive Clinics & Units"></h2>
+      <p data-th="รวมทุกบริการด้านโรคเต้านมไว้ในที่เดียว เพื่อความต่อเนื่องและสะดวกของผู้ป่วย" data-en="Every breast-care service in one place — for continuity and patient convenience."></p>
       <div class="gold-line"></div>
     </div>
-
-    <div class="donate-card">
-      <div class="dc-head">
-        <div><h3>แบบฟอร์มบริจาค</h3><span>Queen Sirikit Centre for Breast Cancer Foundation</span></div>
-        <div class="toggle" id="freqToggle">
-          <button class="on" data-freq="once">ครั้งเดียว</button>
-          <button data-freq="monthly">รายเดือน</button>
-        </div>
+    <div class="svc-grid">
+      <div class="svc wide">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg></div>
+        <h3 data-th="คลินิกมะเร็งเต้านมครบวงจร (OPD)" data-en="Comprehensive Breast Cancer Clinic (OPD)"></h3>
+        <p data-th="จุดเริ่มต้นการดูแล ตรวจประเมินและวางแผนการรักษาโดยทีมแพทย์ผู้เชี่ยวชาญเฉพาะทาง" data-en="The starting point of care — assessment and treatment planning by specialist physicians."></p>
       </div>
-      <div class="dc-body">
-        <div class="amt-grid" id="amtGrid">
-          <button class="amt" data-amt="500"><b>฿500</b><span>ผู้ให้กำลังใจ</span></button>
-          <button class="amt on" data-amt="1000"><b>฿1,000</b><span>ผู้สนับสนุน</span></button>
-          <button class="amt" data-amt="2000"><b>฿2,000</b><span>ผู้อุปถัมภ์</span></button>
-          <button class="amt" data-amt="3000"><b>฿3,000</b><span>ผู้ใจบุญ</span></button>
-          <button class="amt" data-amt="5000"><b>฿5,000</b><span>ผู้มีพระคุณ</span></button>
-          <button class="amt" data-amt="10000"><b>฿10,000</b><span>ผู้อุปการะ</span></button>
-          <div class="amt custom">
-            <label>กำหนดเอง</label>
-            <div class="in"><b>฿</b><input type="number" id="customAmt" placeholder="0" min="1" inputmode="numeric"></div>
-          </div>
-        </div>
-
-        <div class="impact" id="impact">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg>
-          <div><em>฿1,000</em> ช่วยสมทบค่าตรวจคัดกรองมะเร็งเต้านมให้ผู้หญิงที่ขาดโอกาส <span style="color:var(--grey);font-size:.85em">*ตัวอย่างการนำไปใช้</span></div>
-        </div>
-
-        <div class="fields">
-          <div class="field"><label>ชื่อ</label><input type="text" placeholder="ชื่อจริง"></div>
-          <div class="field"><label>นามสกุล</label><input type="text" placeholder="นามสกุล"></div>
-          <div class="field full"><label>อีเมล (สำหรับรับใบเสร็จ)</label><input type="email" placeholder="you@email.com"></div>
-        </div>
-
-        <div class="summary">
-          <div class="s-l">
-            <span>ยอดบริจาครวม</span>
-            <b id="sumTotal">฿1,000 <small id="sumFreq"></small></b>
-          </div>
-          <button class="btn btn-pink btn-lg" id="donateBtn">ดำเนินการบริจาค</button>
-        </div>
-
-        <div class="pay-row">
-          <img src="assets/img/bank/visa-master.png" alt="Visa / MasterCard">
-          <span class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>ชำระเงินปลอดภัยผ่านระบบเข้ารหัส</span>
-        </div>
-        <p class="demo-note">— นี่คือเว็บตัวอย่าง (demo) ปุ่มบริจาคยังไม่ตัดเงินจริง —</p>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div>
+        <h3 data-th="หน่วยรังสีวิทยาเต้านม" data-en="Breast Radiology Unit"></h3>
+        <p data-th="ตรวจคัดกรองและวินิจฉัยด้วยแมมโมแกรมและอัลตราซาวด์" data-en="Screening & diagnosis with mammography and ultrasound."></p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CHANNELS -->
-<section class="section channels" id="channels">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">ช่องทางบริจาคอื่น ๆ</span>
-      <h2>โอนผ่านธนาคาร หรือเช็ค</h2>
-      <p>สำหรับผู้ที่สะดวกโอนเงินหรือสั่งจ่ายเช็ค สามารถบริจาคผ่านบัญชีของมูลนิธิได้โดยตรง</p>
-      <div class="gold-line"></div>
-    </div>
-    <div class="ch-grid">
-      <div class="ch-card">
-        <h3><span class="n">1</span> โอนผ่านบัญชีธนาคาร</h3>
-        <div class="acct-name">บัญชีชื่อ “มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ”</div>
-        <div class="bank">
-          <img src="assets/img/bank/scb.jpg" alt="ธนาคารไทยพาณิชย์">
-          <div><div class="b-name">ธ.ไทยพาณิชย์ · สาขาสภากาชาดไทย (ออมทรัพย์)</div><div class="b-no">045-492405-0</div></div>
-        </div>
-        <div class="bank">
-          <img src="assets/img/bank/kbank.jpg" alt="ธนาคารกสิกรไทย">
-          <div><div class="b-name">ธ.กสิกรไทย · สาขา รพ.จุฬาลงกรณ์ (ออมทรัพย์)</div><div class="b-no">623-2-05989-1</div></div>
-        </div>
-        <div class="bank">
-          <img src="assets/img/bank/bbl.jpg" alt="ธนาคารกรุงเทพ">
-          <div><div class="b-name">ธ.กรุงเทพ · สาขา รพ.จุฬาลงกรณ์ (ออมทรัพย์)</div><div class="b-no">913-7-01266-3</div></div>
-        </div>
-        <div class="ch-note">บริจาคด้วย<b>เช็ค</b> ขีดคร่อม A/C PAYEE ONLY สั่งจ่าย “มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ” ส่งมาที่สำนักงานมูลนิธิฯ</div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v6l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V3"/><path d="M8 3h8"/></svg></div>
+        <h3 data-th="หน่วยพยาธิวิทยาเต้านม" data-en="Breast Pathology Unit"></h3>
+        <p data-th="ตรวจชิ้นเนื้อเพื่อการวินิจฉัยที่แม่นยำ" data-en="Tissue analysis for precise diagnosis."></p>
       </div>
-      <div class="ch-side">
-        <div class="ch-card">
-          <div class="mini">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 5 9-5"/></svg></div>
-            <div><b>ส่งหลักฐานการโอน</b><span>โทรสาร 02-214-6047<br>อีเมล info@qscbcfoundation.org</span></div>
-          </div>
-          <div class="mini">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
-            <div><b>รับใบเสร็จลดหย่อนภาษี</b><span>มูลนิธิจะออกใบเสร็จให้หลังได้รับหลักฐาน</span></div>
-          </div>
-          <div class="mini">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <div><b>สอบถามเพิ่มเติม</b><span>จ.–ศ. เวลาทำการมูลนิธิ</span></div>
-          </div>
-        </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14a7 7 0 11-14 0c0-2 1-4 3-6l4-5 4 5c2 2 3 4 3 6z"/></svg></div>
+        <h3 data-th="หน่วยให้ยาเคมีบำบัด" data-en="Chemotherapy Unit"></h3>
+        <p data-th="ให้การรักษาด้วยยาเคมีบำบัดอย่างปลอดภัยและใส่ใจ" data-en="Safe, attentive chemotherapy treatment."></p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v3M16 3v3M5 9l1.5 11h11L19 9z"/><path d="M4 9h16"/></svg></div>
+        <h3 data-th="ห้องผ่าตัดโรคเต้านม" data-en="Breast Surgery Operating Room"></h3>
+        <p data-th="ห้องผ่าตัดเฉพาะทางด้านโรคเต้านม" data-en="Operating rooms dedicated to breast surgery."></p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+        <h3 data-th="หอผู้ป่วยระยะสั้น" data-en="Short-term Ward"></h3>
+        <p data-th="ดูแลผู้ป่วยหลังหัตถการอย่างใกล้ชิดในระยะสั้น" data-en="Close short-stay care after procedures."></p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M4 9h5"/></svg></div>
+        <h3 data-th="เครื่องมือและอุปกรณ์ทางแพทย์" data-en="Medical Equipment & Devices"></h3>
+        <p data-th="เทคโนโลยีและเครื่องมือที่ทันสมัยเพื่อการรักษา" data-en="Modern technology and devices for treatment."></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
+<section class="section projects" id="projects">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">เงินบริจาคของคุณไปที่ไหน</span>
-      <h2>โครงการที่เราดูแล</h2>
-      <p>ทุกการบริจาคถูกส่งต่อสู่โครงการจริงที่สร้างความเปลี่ยนแปลงให้ผู้ป่วยและชุมชน</p>
+      <span class="eyebrow" data-th="โครงการของศูนย์ฯ" data-en="QSCBC Projects"></span>
+      <h2 data-th="โครงการเพื่อผู้ป่วยและสังคม" data-en="Projects for Patients & Society"></h2>
+      <p data-th="มากกว่าการรักษา คือการดูแลคุณภาพชีวิตและสร้างความรู้สู่สังคม" data-en="Beyond treatment — caring for quality of life and educating society."></p>
       <div class="gold-line"></div>
     </div>
     <div class="proj-grid">
       <div class="proj">
-        <img src="assets/img/proj-park.jpg" alt="โครงการ Pink Park Village">
+        <img src="assets/img/proj-park.jpg" alt="โครงการบ้านพิงพัก Pink Park Village">
         <div class="ov"></div>
-        <div class="tx"><div class="k">Pink Park Village</div><h3>บ้านพักพิง</h3><p>ที่พักและการดูแลคุณภาพชีวิตสำหรับผู้ป่วยระหว่างการรักษา</p></div>
+        <div class="tx"><div class="k">Pink Park Village</div><h3 data-th="บ้านพิงพัก" data-en="Pink Park Village"></h3><p data-th="บ้านพักพิงและการดูแลคุณภาพชีวิตผู้ป่วยระหว่างการรักษา" data-en="A respite home caring for patients' quality of life during treatment."></p></div>
       </div>
       <div class="proj">
-        <img src="assets/img/proj-awareness.png" alt="โครงการรณรงค์ Awareness Campaign">
+        <img src="assets/img/proj-awareness.png" alt="โครงการสร้างความตระหนักรู้สุขภาพเต้านม">
         <div class="ov"></div>
-        <div class="tx"><div class="k">Awareness Campaign</div><h3>รณรงค์ความรู้</h3><p>“Early Detection May Save Your Life” สร้างความตระหนักเรื่องการตรวจเร็ว</p></div>
+        <div class="tx"><div class="k">Awareness</div><h3 data-th="สร้างความตระหนักรู้" data-en="Awareness Campaign"></h3><p data-th="รณรงค์ให้ความรู้เรื่องการตรวจเต้านมตั้งแต่ระยะเริ่มต้น" data-en="Campaigns promoting early breast self-examination and awareness."></p></div>
       </div>
       <div class="proj">
-        <img src="assets/img/proj-slum.jpg" alt="โครงการตรวจคัดกรองในชุมชน">
+        <img src="assets/img/proj-slum.jpg" alt="โครงการสลัมโปรเจค ตรวจคัดกรองในชุมชน">
         <div class="ov"></div>
-        <div class="tx"><div class="k">Slum Project</div><h3>คัดกรองชุมชน</h3><p>ออกหน่วยตรวจคัดกรองให้ผู้หญิงในชุมชนที่เข้าไม่ถึงบริการ</p></div>
+        <div class="tx"><div class="k">Slum Project</div><h3 data-th="สลัม โปรเจค" data-en="Slum Project"></h3><p data-th="ออกหน่วยตรวจคัดกรองให้ผู้หญิงในชุมชนที่เข้าไม่ถึงบริการ" data-en="Mobile screening for women in underserved communities."></p></div>
+      </div>
+    </div>
+    <div class="proj-more">
+      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 00-4 13v3a2 2 0 002 2h4a2 2 0 002-2v-3a7 7 0 00-4-13z"/></svg><span data-th="ภูมิคุ้มกันบำบัด (ระดับเซลล์)" data-en="Cellular Immunotherapy"></span></div>
+      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.9"/></svg><span data-th="เพื่อนช่วยเพื่อน" data-en="Friend Helps Friend"></span></div>
+      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-3 8M12 13l3 8M6 11l6-2 6 2"/></svg><span data-th="เต้นรำบำบัด" data-en="Dance Therapy"></span></div>
+      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg><span data-th="ประชุมวิชาการระดับนานาชาติ" data-en="International Conferences"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section news" id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-th="ข่าวสารและกิจกรรม" data-en="News & Activities"></span>
+      <h2 data-th="ความเคลื่อนไหวของศูนย์ฯ" data-en="Latest from the Centre"></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="news-grid">
+      <article class="post">
+        <div class="ph"><img src="assets/img/park-aerial.jpg" alt="Pink Park Run 2026"></div>
+        <div class="pb"><div class="date">2026</div><h3 data-th="PINK PARK RUN 2026" data-en="PINK PARK RUN 2026"></h3><a class="rm" href="#news" data-th="อ่านต่อ →" data-en="Read more →"></a></div>
+      </article>
+      <article class="post">
+        <div class="ph"><img src="assets/img/mission-mark.jpg" alt="QSCBC หนึ่งเดียวในเอเชีย"></div>
+        <div class="pb"><div class="date">2026</div><h3 data-th="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม (QSCBC) หนึ่งเดียวในเอเชีย" data-en="QSCBC — the only one of its kind in Asia"></h3><a class="rm" href="#news" data-th="อ่านต่อ →" data-en="Read more →"></a></div>
+      </article>
+      <article class="post">
+        <div class="ph"><img src="assets/img/in-memoriam.jpg" alt="สถิตในดวงใจตราบนิรันดร์"></div>
+        <div class="pb"><div class="date">2026</div><h3 data-th="สถิตในดวงใจตราบนิรันดร์" data-en="Forever in our hearts"></h3><a class="rm" href="#news" data-th="อ่านต่อ →" data-en="Read more →"></a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section class="section donate" id="donate">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-th="ร่วมบริจาค" data-en="Donate"></span>
+      <h2 data-th="ร่วมเป็นพลังให้ผู้ป่วยมะเร็งเต้านม" data-en="Be a Force for Breast Cancer Patients"></h2>
+      <p data-th="บริจาคผ่านมูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ ครั้งเดียวหรือรายเดือน ทุกยอดออกใบเสร็จลดหย่อนภาษีได้" data-en="Give through the QSCBC Foundation — one-time or monthly. Every gift is tax-deductible."></p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="donate-card">
+      <div class="dc-head">
+        <div><h3 data-th="แบบฟอร์มบริจาค" data-en="Donation Form"></h3><span data-th="มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ" data-en="QSCBC Foundation"></span></div>
+        <div class="toggle" id="freqToggle">
+          <button class="on" data-freq="once" data-th="ครั้งเดียว" data-en="One-time"></button>
+          <button data-freq="monthly" data-th="รายเดือน" data-en="Monthly"></button>
+        </div>
+      </div>
+      <div class="dc-body">
+        <div class="amt-grid" id="amtGrid">
+          <button class="amt" data-amt="500"><b>฿500</b><span data-th="ผู้ให้กำลังใจ" data-en="Supporter"></span></button>
+          <button class="amt on" data-amt="1000"><b>฿1,000</b><span data-th="ผู้สนับสนุน" data-en="Patron"></span></button>
+          <button class="amt" data-amt="2000"><b>฿2,000</b><span data-th="ผู้อุปถัมภ์" data-en="Benefactor"></span></button>
+          <button class="amt" data-amt="3000"><b>฿3,000</b><span data-th="ผู้ใจบุญ" data-en="Guardian"></span></button>
+          <button class="amt" data-amt="5000"><b>฿5,000</b><span data-th="ผู้มีพระคุณ" data-en="Champion"></span></button>
+          <button class="amt" data-amt="10000"><b>฿10,000</b><span data-th="ผู้อุปการะ" data-en="Sustainer"></span></button>
+          <div class="amt custom">
+            <label data-th="กำหนดเอง" data-en="Custom"></label>
+            <div class="in"><b>฿</b><input type="number" id="customAmt" placeholder="0" min="1" inputmode="numeric"></div>
+          </div>
+        </div>
+
+        <div class="impact" id="impact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg>
+          <div></div>
+        </div>
+
+        <div class="fields">
+          <div class="field"><label data-th="ชื่อ" data-en="First name"></label><input type="text" data-ph-th="ชื่อจริง" data-ph-en="First name"></div>
+          <div class="field"><label data-th="นามสกุล" data-en="Last name"></label><input type="text" data-ph-th="นามสกุล" data-ph-en="Last name"></div>
+          <div class="field full"><label data-th="อีเมล (สำหรับรับใบเสร็จ)" data-en="Email (for receipt)"></label><input type="email" placeholder="you@email.com"></div>
+        </div>
+
+        <div class="summary">
+          <div class="s-l">
+            <span data-th="ยอดบริจาครวม" data-en="Total donation"></span>
+            <b id="sumTotal">฿1,000</b>
+          </div>
+          <button class="btn btn-teal btn-lg" id="donateBtn" data-th="ดำเนินการบริจาค" data-en="Proceed to Donate"></button>
+        </div>
+        <p class="demo-note" data-th="— นี่คือเว็บตัวอย่าง (demo) ปุ่มบริจาคยังไม่ตัดเงินจริง —" data-en="— This is a demo site. The donate button does not process real payments. —"></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ROYAL STRIP -->
-<section class="royal">
+<!-- BANK CHANNELS -->
+<section class="section channels">
   <div class="wrap">
-    <div class="mark"><img src="assets/img/logo.png" alt="ตราสัญลักษณ์มูลนิธิ"></div>
-    <div>
-      <span class="eyebrow">มูลนิธิเฉลิมพระเกียรติ</span>
-      <h2>ก่อตั้งเพื่อเป็นเสาหลักให้ผู้หญิงไทย<br>ในการต่อสู้กับมะเร็งเต้านม</h2>
-      <p>มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ ดำเนินงานด้วยความโปร่งใส มุ่งให้การป้องกัน การรักษา และการดูแลเข้าถึงผู้หญิงไทยทุกคนอย่างเท่าเทียม ด้วยพลังจากผู้บริจาคเช่นคุณ</p>
-      <a href="#donate" class="btn btn-gold cta">ร่วมเป็นส่วนหนึ่ง</a>
+    <div class="section-head">
+      <span class="eyebrow" data-th="ช่องทางบริจาคอื่น ๆ" data-en="Other Ways to Give"></span>
+      <h2 data-th="โอนผ่านธนาคาร หรือเช็ค" data-en="Bank Transfer or Cheque"></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="ch-grid">
+      <div class="ch-card">
+        <h3><span class="n">1</span> <span data-th="โอนผ่านบัญชีธนาคาร" data-en="Bank Transfer"></span></h3>
+        <div class="acct" data-th="บัญชีชื่อ “มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ”" data-en="Account: “Queen Sirikit Centre for Breast Cancer Foundation”"></div>
+        <div class="bank">
+          <img src="assets/img/bank/scb.jpg" alt="SCB">
+          <div><div class="b-name" data-th="ธ.ไทยพาณิชย์ · สาขาสภากาชาดไทย (ออมทรัพย์)" data-en="SCB · Thai Red Cross Branch (Savings)"></div><div class="b-no">045-492405-0</div></div>
+        </div>
+        <div class="bank">
+          <img src="assets/img/bank/kbank.jpg" alt="KBank">
+          <div><div class="b-name" data-th="ธ.กสิกรไทย · สาขา รพ.จุฬาลงกรณ์ (ออมทรัพย์)" data-en="KBank · Chulalongkorn Hospital Branch (Savings)"></div><div class="b-no">623-2-05989-1</div></div>
+        </div>
+        <div class="bank">
+          <img src="assets/img/bank/bbl.jpg" alt="BBL">
+          <div><div class="b-name" data-th="ธ.กรุงเทพ · สาขา รพ.จุฬาลงกรณ์ (ออมทรัพย์)" data-en="Bangkok Bank · Chulalongkorn Hospital Branch (Savings)"></div><div class="b-no">913-7-01266-3</div></div>
+        </div>
+        <div class="ch-note" data-th="บริจาคด้วยเช็ค ขีดคร่อม A/C PAYEE ONLY สั่งจ่าย “มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ” ส่งมาที่สำนักงานมูลนิธิฯ" data-en="By cheque: crossed A/C PAYEE ONLY, payable to “Queen Sirikit Centre for Breast Cancer Foundation”, sent to the Foundation office."></div>
+      </div>
+      <div class="ch-side">
+        <div class="ch-card">
+          <div class="mini">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2A19.8 19.8 0 013 5.2 2 2 0 015 3h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L9 10.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg></div>
+            <div><b data-th="สอบถามการบริจาค" data-en="Donation enquiries"></b><span>090-904-6999</span></div>
+          </div>
+          <div class="mini">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+            <div><b data-th="รับใบเสร็จลดหย่อนภาษี" data-en="Tax-deductible receipt"></b><span data-th="ออกในนามมูลนิธิฯ" data-en="Issued by the Foundation"></span></div>
+          </div>
+          <div class="mini">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div><b data-th="เวลาทำการ" data-en="Opening hours"></b><span data-th="จันทร์–ศุกร์ 08.00–16.00 น." data-en="Mon–Fri 08:00–16:00"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-th="ติดต่อเรา" data-en="Contact Us"></span>
+      <h2 data-th="ติดต่อศูนย์ฯ" data-en="Get in Touch"></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="ct-grid">
+      <div class="ct-info">
+        <div class="ct-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><b data-th="ที่อยู่" data-en="Address"></b><span data-th="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย อาคารว่องวานิช 1873 ถนนพระราม 4 ปทุมวัน กรุงเทพฯ 10330" data-en="Queen Sirikit Centre for Breast Cancer, King Chulalongkorn Memorial Hospital, Thai Red Cross Society, Vongvanij Bldg, 1873 Rama IV Rd, Pathum Wan, Bangkok 10330"></span></div>
+        </div>
+        <div class="ct-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2A19.8 19.8 0 013 5.2 2 2 0 015 3h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L9 10.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg></div>
+          <div><b data-th="โทรศัพท์" data-en="Phone"></b>
+            <span data-th="คลินิก/บริการทางการแพทย์ : 02-256-4693" data-en="Clinic / medical services: 02-256-4693"></span><br>
+            <span data-th="บริจาคและสนับสนุน : 090-904-6999" data-en="Donations & support: 090-904-6999"></span>
+          </div>
+        </div>
+        <div class="ct-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><b data-th="เวลาทำการ" data-en="Opening hours"></b><span data-th="เปิดบริการ 08.00–16.00 น. วันจันทร์–วันศุกร์ (ปิดวันเสาร์ อาทิตย์ และวันหยุดนักขัตฤกษ์)" data-en="08:00–16:00, Monday–Friday (closed weekends & public holidays)"></span></div>
+        </div>
+      </div>
+      <div class="ct-map">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="แผนที่ศูนย์ฯ"
+          src="https://maps.google.com/maps?q=King%20Chulalongkorn%20Memorial%20Hospital%20Rama%20IV%20Pathum%20Wan%20Bangkok&z=16&output=embed"></iframe>
+        <a class="map-fallback" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/search/?api=1&query=King+Chulalongkorn+Memorial+Hospital+Rama+IV+Pathum+Wan+Bangkok"
+          data-th="เปิดใน Google Maps ↗" data-en="Open in Google Maps ↗"></a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer id="contact">
+<footer>
   <div class="wrap">
     <div class="f-top">
       <div class="f-brand">
-        <img src="assets/img/logo.png" alt="โลโก้มูลนิธิ">
-        <b>มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ</b>
-        <p>Queen Sirikit Centre for Breast Cancer Foundation — ป้องกัน รักษา ดูแล ผู้ป่วยมะเร็งเต้านม</p>
+        <img src="assets/img/logo-emblem.png" alt="ตราสัญลักษณ์ศูนย์ฯ">
+        <b data-th="ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม" data-en="Queen Sirikit Centre for Breast Cancer"></b>
+        <p data-th="โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย — ดูแลผู้ป่วยมะเร็งเต้านมอย่างครบวงจร" data-en="King Chulalongkorn Memorial Hospital, Thai Red Cross Society — comprehensive breast cancer care."></p>
       </div>
       <div class="f-col">
-        <h4>ติดต่อเรา</h4><div class="gl"></div>
-        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/><circle cx="12" cy="10" r="2.5"/></svg><span>799 ถนนพระรามที่ 1 แขวงวังใหม่<br>เขตปทุมวัน กรุงเทพฯ 10330</span></div>
-        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><span>โทรสาร 02-214-6047</span></div>
-        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 5 9-5"/></svg><a href="mailto:info@qscbcfoundation.org">info@qscbcfoundation.org</a></div>
+        <h4 data-th="เมนู" data-en="Menu"></h4><div class="gl"></div>
+        <a href="#about" data-th="เกี่ยวกับศูนย์ฯ" data-en="About Us"></a>
+        <a href="#services" data-th="การบริการ" data-en="Services"></a>
+        <a href="#projects" data-th="โครงการของศูนย์ฯ" data-en="Projects"></a>
+        <a href="#news" data-th="ข่าวสารและกิจกรรม" data-en="News"></a>
+        <a href="#donate" data-th="บริจาค" data-en="Donate"></a>
       </div>
       <div class="f-col">
-        <h4>ติดตามเรา</h4><div class="gl"></div>
-        <div class="social">
-          <a href="https://www.facebook.com/qscbcfoundation/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
-          <a href="https://www.instagram.com/qscbcfoundation/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="http://line.me/ti/p/~@qscbcfoundation" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6C21.4 13.6 22 12 22 10.2 22 5.7 17.5 2 12 2z"/></svg></a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 001.8-1.8C23 15.2 23 12 23 12zm-13 3V9l5 3z"/></svg></a>
-        </div>
+        <h4 data-th="ติดต่อ" data-en="Contact"></h4><div class="gl"></div>
+        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg><span data-th="อาคารว่องวานิช 1873 ถ.พระราม 4 ปทุมวัน กรุงเทพฯ 10330" data-en="Vongvanij Bldg, 1873 Rama IV Rd, Pathum Wan, Bangkok 10330"></span></div>
+        <div class="f-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2A19.8 19.8 0 013 5.2 2 2 0 015 3h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L9 10.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></svg><span>02-256-4693 · 090-904-6999</span></div>
       </div>
     </div>
     <div class="f-bottom">
-      <span>© 2568 มูลนิธิศูนย์มะเร็งเต้านมเฉลิมพระเกียรติ · สงวนลิขสิทธิ์</span>
-      <span class="demo-flag">เว็บตัวอย่าง (demo) จัดทำโดย บริษัท อาวล์ เดย์ เฮ้าส์ จำกัด</span>
+      <span data-th="© 2568 ศูนย์สิริกิติ์บรมราชินีนาถ เพื่อโรคมะเร็งเต้านม · สงวนลิขสิทธิ์" data-en="© 2025 Queen Sirikit Centre for Breast Cancer · All rights reserved"></span>
+      <span class="demo" data-th="เว็บตัวอย่าง (demo) จัดทำโดย บริษัท อาวล์ เดย์ เฮ้าส์ จำกัด" data-en="Demo site by Owl Day House Co., Ltd."></span>
     </div>
   </div>
 </footer>
@@ -678,32 +865,49 @@ footer{background:#2c2b2c;color:#bdb6b0;font-size:.94rem}
 <!-- TOAST -->
 <div class="toast" id="toast">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg>
-  <div><b id="toastT">ขอบคุณสำหรับน้ำใจ 💗</b><span id="toastS">นี่คือเว็บตัวอย่าง — ระบบบริจาคจริงจะเชื่อมต่อเมื่อใช้งานจริง</span></div>
+  <div><b id="toastT"></b><span id="toastS"></span></div>
 </div>
 
 <script>
 (function(){
+  /* ---------- i18n ---------- */
+  var lang = (localStorage.getItem('qscbc_lang')==='en') ? 'en' : 'th';
+  function applyLang(l){
+    lang=l; localStorage.setItem('qscbc_lang',l);
+    document.documentElement.lang=l;
+    document.body.classList.toggle('lang-en',l==='en');
+    document.body.classList.toggle('lang-th',l==='th');
+    document.querySelectorAll('[data-th]').forEach(function(el){
+      var t=el.getAttribute('data-'+l); if(t!==null) el.textContent=t;
+    });
+    document.querySelectorAll('[data-ph-th]').forEach(function(el){
+      var t=el.getAttribute('data-ph-'+l); if(t!==null) el.placeholder=t;
+    });
+    document.querySelectorAll('.langsw button').forEach(function(b){b.classList.toggle('on',b.dataset.lang===l);});
+    render();
+  }
+  document.querySelectorAll('.langsw button').forEach(function(b){
+    b.addEventListener('click',function(){applyLang(b.dataset.lang);});
+  });
+
+  /* ---------- donation ---------- */
   var state={amt:1000,freq:'once'};
   var impacts={
-    500:'ช่วยสมทบค่าเดินทางมาตรวจติดตามให้ผู้ป่วย',
-    1000:'ช่วยสมทบค่าตรวจคัดกรองมะเร็งเต้านมให้ผู้หญิงที่ขาดโอกาส',
-    2000:'ช่วยสนับสนุนการดูแลผู้ป่วยที่บ้านพักพิง',
-    3000:'ช่วยสมทบทุนค่ายาและเวชภัณฑ์สำหรับการรักษา',
-    5000:'ร่วมสร้างโอกาสการรักษาให้ผู้ป่วยที่ขาดแคลนทุนทรัพย์',
-    10000:'ร่วมเป็นเสาหลักสนับสนุนพันธกิจของมูลนิธิทั้งปี'
+    th:{500:'ช่วยสมทบค่าเดินทางมาตรวจติดตามให้ผู้ป่วย',1000:'ช่วยสมทบค่าตรวจคัดกรองมะเร็งเต้านมให้ผู้ที่ขาดโอกาส',2000:'ช่วยสนับสนุนการดูแลผู้ป่วยที่บ้านพิงพัก',3000:'ช่วยสมทบทุนค่ายาและเวชภัณฑ์สำหรับการรักษา',5000:'ร่วมสร้างโอกาสการรักษาให้ผู้ป่วยที่ขาดแคลนทุนทรัพย์',10000:'ร่วมเป็นกำลังหลักสนับสนุนพันธกิจของศูนย์ฯ ตลอดทั้งปี'},
+    en:{500:'helps cover a patient’s travel for follow-up visits',1000:'helps fund breast cancer screening for those in need',2000:'helps support patient care at Pink Park Village',3000:'helps fund medicine and supplies for treatment',5000:'helps open treatment access for patients in financial hardship',10000:'helps sustain the Centre’s mission throughout the year'}
   };
-  function fmt(n){return '฿'+Number(n).toLocaleString('th-TH');}
+  var noteTxt={th:'*ตัวอย่างการนำไปใช้',en:'*illustrative use'};
+  function fmt(n){return '฿'+Number(n||0).toLocaleString('en-US');}
   function render(){
-    var t=fmt(state.amt||0);
-    document.getElementById('sumTotal').innerHTML=t+' <small id="sumFreq">'+(state.freq==='monthly'?'/ เดือน':'')+'</small>';
-    var imp=document.getElementById('impact');
-    var msg=impacts[state.amt];
-    if(msg){imp.style.display='flex';imp.querySelector('div').innerHTML='<em>'+t+'</em> '+msg+' <span style="color:var(--grey);font-size:.85em">*ตัวอย่างการนำไปใช้</span>';}
+    var t=fmt(state.amt);
+    var freqLbl = state.freq==='monthly' ? (lang==='th'?' / เดือน':' / mo') : '';
+    document.getElementById('sumTotal').innerHTML=t+(freqLbl?' <small>'+freqLbl+'</small>':'');
+    var imp=document.getElementById('impact'), msg=impacts[lang][state.amt];
+    if(msg){imp.style.display='flex';
+      imp.querySelector('div').innerHTML='<em>'+t+'</em> '+msg+' <span style="color:var(--ink-soft);font-size:.85em">'+noteTxt[lang]+'</span>';}
     else{imp.style.display='none';}
   }
-  // amounts
-  var grid=document.getElementById('amtGrid');
-  var custom=document.getElementById('customAmt');
+  var grid=document.getElementById('amtGrid'), custom=document.getElementById('customAmt');
   grid.querySelectorAll('.amt[data-amt]').forEach(function(b){
     b.addEventListener('click',function(){
       grid.querySelectorAll('.amt').forEach(function(x){x.classList.remove('on');});
@@ -716,30 +920,55 @@ footer{background:#2c2b2c;color:#bdb6b0;font-size:.94rem}
     else{state.amt=0;}
     render();
   });
-  // frequency
-  document.getElementById('freqToggle').querySelectorAll('button').forEach(function(b){
+  document.querySelectorAll('#freqToggle button').forEach(function(b){
     b.addEventListener('click',function(){
       document.querySelectorAll('#freqToggle button').forEach(function(x){x.classList.remove('on');});
       b.classList.add('on');state.freq=b.dataset.freq;render();
     });
   });
-  // donate (demo)
   var toast=document.getElementById('toast'),tmr;
   document.getElementById('donateBtn').addEventListener('click',function(){
-    if(!state.amt){document.getElementById('toastT').textContent='กรุณาเลือกจำนวนเงิน';document.getElementById('toastS').textContent='เลือกยอดบริจาคหรือกรอกจำนวนที่ต้องการ';}
-    else{document.getElementById('toastT').innerHTML='ขอบคุณสำหรับน้ำใจ 💗';document.getElementById('toastS').textContent='ยอด '+fmt(state.amt)+(state.freq==='monthly'?' /เดือน':'')+' — นี่คือเว็บตัวอย่าง ระบบจริงจะเชื่อมต่อเมื่อใช้งาน';}
+    var tt=document.getElementById('toastT'),ts=document.getElementById('toastS');
+    if(!state.amt){tt.textContent=lang==='th'?'กรุณาเลือกจำนวนเงิน':'Please choose an amount';
+      ts.textContent=lang==='th'?'เลือกยอดบริจาคหรือกรอกจำนวนที่ต้องการ':'Select a preset or enter a custom amount';}
+    else{tt.textContent=lang==='th'?'ขอบคุณสำหรับน้ำใจ':'Thank you for your kindness';
+      ts.textContent=(lang==='th'?'ยอด ':'Amount ')+fmt(state.amt)+(state.freq==='monthly'?(lang==='th'?' /เดือน':' /mo'):'')+(lang==='th'?' — นี่คือเว็บตัวอย่าง ระบบจริงจะเชื่อมต่อเมื่อใช้งาน':' — this is a demo; the live system connects on launch');}
     toast.classList.add('show');clearTimeout(tmr);tmr=setTimeout(function(){toast.classList.remove('show');},4200);
   });
-  // header shadow
+
+  /* ---------- desktop dropdowns ---------- */
+  document.querySelectorAll('.menu > li').forEach(function(li){
+    var btn=li.querySelector('button'); if(!btn)return;
+    btn.addEventListener('click',function(e){e.stopPropagation();
+      var wasOpen=li.classList.contains('open');
+      document.querySelectorAll('.menu > li').forEach(function(x){x.classList.remove('open');});
+      if(!wasOpen)li.classList.add('open');
+    });
+    li.addEventListener('mouseenter',function(){
+      document.querySelectorAll('.menu > li').forEach(function(x){x.classList.remove('open');});
+      li.classList.add('open');});
+    li.addEventListener('mouseleave',function(){li.classList.remove('open');});
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.menu > li').forEach(function(x){x.classList.remove('open');});});
+  document.querySelectorAll('.dropdown a').forEach(function(a){a.addEventListener('click',function(){
+    document.querySelectorAll('.menu > li').forEach(function(x){x.classList.remove('open');});});});
+
+  /* ---------- header shadow ---------- */
   var h=document.getElementById('header');
   window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>10);});
-  // mobile menu
+
+  /* ---------- mobile menu ---------- */
   var m=document.getElementById('mobile');
   document.getElementById('burger').addEventListener('click',function(){m.classList.add('open');});
   document.getElementById('mclose').addEventListener('click',function(){m.classList.remove('open');});
   m.addEventListener('click',function(e){if(e.target===m)m.classList.remove('open');});
-  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');});});
-  render();
+  document.querySelectorAll('.macc > button').forEach(function(b){
+    if(b.classList.contains('solo')){b.addEventListener('click',function(){m.classList.remove('open');});return;}
+    b.addEventListener('click',function(){b.parentElement.classList.toggle('open');});
+  });
+  m.querySelectorAll('.sub a, .m-cta a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');});});
+
+  applyLang(lang);
 })();
 </script>
 </body>
