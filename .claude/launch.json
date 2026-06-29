@@ -24,6 +24,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve", "leads/jhair-serum/dist", "-l", "4176"],
       "port": 4176
+    },
+    {
+      "name": "postmailbox-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/post-mail-box/dist", "-l", "4177"],
+      "port": 4177
     }
   ]
 }
