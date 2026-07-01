@@ -36,6 +36,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve", "leads/qscbc-foundation-donate/dist", "-l", "4178"],
       "port": 4178
+    },
+    {
+      "name": "pk-accounting-demo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "leads/pk-accounting/dist", "-l", "4179"],
+      "port": 4179
     }
   ]
 }
